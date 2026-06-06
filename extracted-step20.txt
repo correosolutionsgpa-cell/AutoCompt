@@ -1,0 +1,59 @@
+﻿Created At: 2026-06-05T10:58:03Z
+Completed At: 2026-06-05T10:58:03Z
+File Path: `file:///c:/Users/Fabiola/Downloads/AutoCompt%20-%20Landing%20Page/index.html`
+Total Lines: 2267
+Total Bytes: 126588
+Showing lines 1 to 800
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: <!DOCTYPE html>
+2: <html lang="fr-CA" class="scroll-smooth">
+3: <head>
+4:   <meta charset="UTF-8">
+5:   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E" />
+6:   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+7:   <title>AutoCompt | Logiciel de comptabilitÃ© immobilier QuÃ©bec</title>
+8:   <meta name="description" content="AutoCompt: La solution immobiliÃ¨re de rÃ©fÃ©rence au QuÃ©bec. Le logiciel de comptabilitÃ© conÃ§u pour les travailleurs autonomes, propriÃ©taires de plex et syndicats.">
+9:   <meta name="keywords" content="logiciel de comptabilitÃ© immobilier QuÃ©bec, gestion syndicat de copropriÃ©tÃ©, travailleur autonome, AutoCompt, QuÃ©bec">
+10:   
+11:   <!-- Open Graph (Social Media) -->
+12:   <meta property="og:title" content="AutoCompt | Logiciel de comptabilitÃ© immobilier QuÃ©bec">
+13:   <meta property="og:description" content="AutoCompt: La solution immobiliÃ¨re de rÃ©fÃ©rence au QuÃ©bec. Le logiciel de comptabilitÃ© conÃ§u pour les travailleurs autonomes, propriÃ©taires de plex et syndicats.">
+14:   <meta property="og:type" content="website">
+15:   <meta property="og:site_name" content="AutoCompt">
+16: 
+17:   <!-- Google Font: Inter -->
+18:   <link rel="preconnect" href="https://fonts.googleapis.com">
+19:   <link rel="preconnect" href=
+<truncated 45282 bytes>
+rcase font-black tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full">
+689:               ZÃ©ro Vendor Lock-In
+690:             </span>
+691:             <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-t="deepdive.drive.title"></h3>
+692:             <p class="text-sm md:text-base leading-relaxed text-slate-600 dark:text-zinc-400" data-t="deepdive.drive.desc"></p>
+693:             <div class="flex gap-4">
+694:               <div class="flex items-center gap-2 text-xs font-semibold text-emerald-500">
+695:                 <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0"></i> Vous restez propriÃ©taire de chaque fichier
+696:               </div>
+697:             </div>
+698:           </div>
+699:         </div>
+700: 
+701:         <!-- Row 3: DocuLegal -->
+702:         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+703:           <div class="lg:col-span-6 space-y-6 text-left">
+704:             <span class="text-[10px] uppercase font-black tracking-wider text-emerald-700 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full">
+705:               Gestion Documentaire Intelligente
+706:             </span>
+707:             <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-t="deepdive.doculegal.title"></h3>
+708:             <p class="text-sm md:text-base leading-relaxed text-slate-600 dark:text-zinc-400" data-t="deepdive.doculegal.desc"></p>
+709:             <div class="flex gap-4">
+710:               <div class="flex items-center gap-2 text-xs font-semibold text-emerald-500">
+711:                 <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0"></i> Archivage Cloud automatisÃ© conforme
+712:               </div>
+713:             </div>
+714:           </div>
+715: 
+716:  
+<truncated 6469 bytes>
+
+NOTE: The output was truncated because it was too long. Use a more targeted query or a smaller range to get the information you need.

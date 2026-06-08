@@ -41,11 +41,13 @@ const FR = {
     ownersToggle: "Propriétaires & Autonomes",
     syndicatesToggle: "Syndicats de Copropriété",
     popular: "Plus Populaire",
-    cta: "Rejoindre la liste d'attente",
+    cta: "Réserver mon accès gratuit (Limite de 20 places)",
     promoLabel: "Code promo",
     promoApply: "Appliquer",
     promoSuccess: "✓ Code appliqué !",
     promoInvalid: "✗ Code invalide",
+    betaInfo: "Programme Bêta Exclusif : Limité aux 20 premiers inscrits. Remplissez le formulaire de réservation; votre code d'accès gratuit vous sera envoyé par courriel une fois validé.",
+    betaPromoTag: "Offre Bêta : Gratuit pour les 20 premiers",
     billingPeriod: {
       monthly: "/ mois",
       annual: "/ mois",
@@ -137,11 +139,11 @@ const FR = {
     ]
   },
   deepdive: {
-    title: "Une solution immobilière provinciale de nouvelle génération",
+    title: "Une solution immobilière provinciale de nouvelle generación",
     subtitle: "Découvrez comment notre technologie optimise la comptabilité des investisseurs, travailleurs autonomes et syndicats au Québec.",
     magic: {
-      title: "Simplification fiscale : Génération du Relevé 31",
-      desc: "Simplifiez vos envois fiscaux et la gestion de vos immeubles partout au Québec. \n\nOptimisez votre transparence grâce à nos Liens Magiques chiffrés : les administrateurs de syndicats peuvent partager instantanément les états financiers et mouvements administratifs avec les copropriétaires, sans gestion de mots de passe complexe.\n\nPour les propriétaires de Plex, profitez d'un accès dual collaboratif : partagez vos informations avec vos partenaires en temps réel via votre espace Cloud sécurisé. Vos documents sont centralisés, automatiquement organisés par date et par dossier, et accessibles à tout moment. L'automatisation intelligente d'AutoCompt transforme votre gestion administrative en un processus fluide et parfaitement structuré.",
+      title: "Simplification fiscale : Gestion du Relevé 31",
+      desc: "Gestion du Relevé 31 : Recevez des alertes pour vos dates limites et facilitez la distribution des documents à vos locataires. (Le document officiel doit être produit directement sur le site de Revenu Québec).",
     },
     drive: {
       title: "Intégration Cloud flexible",
@@ -149,7 +151,7 @@ const FR = {
     },
     doculegal: {
       title: "DocuLegal : Votre centre de commande et de signature numérique.",
-      desc: "Centralisez, sécurisez et signez numériquement vos documents immobiliers privés en un seul endroit. DocuLegal vous permet de signer vos promesses d'achat et vos contrats de gré à gré en toute légalité, tout en structurant automatiquement vos documents, Relevés 31 et factures dans des dossiers intelligents organisés par adresse et par date directement dans votre espace Cloud sécurisé.",
+      desc: "Centralisez, sécurisez et signez numériquement vos documents immobiliers privés en un seul endroit. DocuLegal vous permet de signer vos promesses d'achat et vos contrats de gré à gré en toute légalité, tout en structurant automatiquement vos documents (promesses d'achat, reçus de Relevé 31, factures) dans des dossiers intelligents organisés par adresse et par date directement dans votre espace Cloud sécurisé.",
     }
   },
   simulators: {
@@ -179,15 +181,15 @@ const FR = {
       netExpense: "Coût net après remboursement de taxes",
     },
     magic: {
-      title: "Générateur de Relevé 31 par IA",
-      desc: "Visualisez la génération automatique du Relevé 31 pour Revenu Québec. Saisissez le courriel du locataire pour simuler la création de son relevé fiscal et l'envoi de son lien d'accès sécurisé.",
+      title: "Simulateur de distribution du Relevé 31",
+      desc: "Visualisez le suivi et la distribution du Relevé 31. Saisissez le courriel du locataire pour simuler la distribution du document fiscal et l'envoi de son lien d'accès sécurisé. (Le document officiel doit être produit directement sur le site de Revenu Québec).",
       emailLabel: "Courriel du locataire",
       placeholder: "locataire@monimmeuble.ca",
-      btn: "Générer et envoyer le Relevé 31",
-      generating: "Génération automatique du Relevé 31 en cours...",
-      success: "Relevé 31 généré avec succès ! Transmis via un lien sécurisé.",
-      previewLabel: "Lien sécurisé du Relevé 31 généré :",
-      actionBtn: "Copier le lien du Relevé 31",
+      btn: "Simuler l'envoi du Relevé 31",
+      generating: "Préparation de la distribution du Relevé 31 en cours...",
+      success: "Relevé 31 distribué avec succès ! Transmis via un lien sécurisé de consultation.",
+      previewLabel: "Lien sécurisé du Relevé 31 distribué :",
+      actionBtn: "Copier le lien d'accès",
       copied: "Lien copié !",
     },
   },
@@ -211,6 +213,7 @@ const FR = {
     privacy: "Politique de confidentialité",
     terms: "Conditions d'utilisation",
     contact: "Nous joindre",
+    legalNotice: "AutoCompt est un outil technologique d'organisation. Cette plateforme ne remplace ni votre comptable, ni votre ingénieur. Elle facilite la centralisation de vos documents pour une gestion professionnelle.",
   },
   support: {
     title: "Sofi, notre assistance intelligente, disponible 24/7.",
@@ -266,11 +269,13 @@ const EN = {
     ownersToggle: "Owners & Self-employed",
     syndicatesToggle: "Condo Syndicates",
     popular: "Most Popular",
-    cta: "Join the waitlist",
+    cta: "Reserve my free access (Limit: 20 spots)",
     promoLabel: "Promo code",
     promoApply: "Apply",
     promoSuccess: "✓ Code applied!",
     promoInvalid: "✗ Invalid code",
+    betaInfo: "Exclusive Beta Program: Limited to the first 20 signups. Fill out the reservation form; your free access code will be sent to you by email once validated.",
+    betaPromoTag: "Beta Offer: Free for the first 20",
     billingPeriod: {
       monthly: "/ month",
       annual: "/ month",
@@ -365,8 +370,8 @@ const EN = {
     title: "A next-generation provincial real estate solution",
     subtitle: "Discover how our technology optimizes bookkeeping for investors, self-employed workers, and syndicates in Quebec.",
     magic: {
-      title: "Tax simplification: Generation of Relevé 31",
-      desc: "Simplify your tax mailings and property management across Quebec. \n\nOptimize your transparency with our encrypted Magic Links: syndicate administrators can instantly share financial statements and administrative reports with co-owners, without complex password management.\n\nFor Plex owners, enjoy a collaborative dual access: share your information with your partners in real time via your secure Cloud space. Your documents are centralized, automatically organized by date and folder, and accessible at any time. AutoCompt's smart automation transforms your administrative management into a smooth and perfectly structured process.",
+      title: "Tax simplification: Relevé 31 Management",
+      desc: "Relevé 31 Management: Receive alerts for your deadlines and facilitate document distribution to your tenants. (The official document must be produced directly on the Revenu Québec website).",
     },
     drive: {
       title: "Flexible Cloud Integration",
@@ -374,7 +379,7 @@ const EN = {
     },
     doculegal: {
       title: "DocuLegal: Your command and digital signature center.",
-      desc: "Centralize, secure, and digitally sign your private real estate documents in one place. DocuLegal allows you to legally sign your purchase offers and private contracts, while automatically organizing your documents, Relevés 31, and invoices into smart folders structured by address and date directly in your secure Cloud space.",
+      desc: "Centralize, secure, and digitally sign your private real estate documents in one place. DocuLegal allows you to legally sign your purchase offers and private contracts, while automatically organizing your documents (purchase offers, Relevé 31 receipts, invoices) into smart folders structured by address and date directly in your secure Cloud space.",
     }
   },
   simulators: {
@@ -404,15 +409,15 @@ const EN = {
       netExpense: "Net cost after tax rebates",
     },
     magic: {
-      title: "AI Relevé 31 Generator",
-      desc: "Visualize the automatic generation of Relevé 31 for Revenu Québec. Enter the tenant's email to simulate creating their tax form and sending their secure access link.",
+      title: "Relevé 31 Distribution Simulator",
+      desc: "Visualize Relevé 31 tracking and distribution. Enter the tenant's email to simulate the distribution of the tax document and sending their secure access link. (The official document must be produced directly on the Revenu Québec website).",
       emailLabel: "Tenant Email",
       placeholder: "tenant@myproperty.ca",
-      btn: "Generate and send Relevé 31",
-      generating: "Generating automatic Relevé 31...",
-      success: "Relevé 31 generated successfully! Sent via secure link.",
-      previewLabel: "Generated secure Relevé 31 link:",
-      actionBtn: "Copy Relevé 31 link",
+      btn: "Simulate sending Relevé 31",
+      generating: "Preparing Relevé 31 distribution...",
+      success: "Relevé 31 distributed successfully! Sent via secure view link.",
+      previewLabel: "Distributed secure Relevé 31 link:",
+      actionBtn: "Copy access link",
       copied: "Link copied!",
     },
   },
@@ -436,6 +441,7 @@ const EN = {
     privacy: "Privacy Policy",
     terms: "Terms of Use",
     contact: "Contact Us",
+    legalNotice: "AutoCompt is a technological organization tool. This platform does not replace your accountant or your engineer. It facilitates the centralization of your documents for professional management.",
   },
   support: {
     title: "Sofi, our smart support, available 24/7.",
@@ -491,11 +497,13 @@ const ES = {
     ownersToggle: "Propietarios y Autónomos",
     syndicatesToggle: "Sindicatos de Copropiedad",
     popular: "Más Popular",
-    cta: "Unirse a la lista de espera",
+    cta: "Reservar mi acceso gratis (Límite: 20 cupos)",
     promoLabel: "Código promo",
     promoApply: "Aplicar",
     promoSuccess: "✓ ¡Código aplicado!",
     promoInvalid: "✗ Código inválido",
+    betaInfo: "Programa Beta Exclusivo: Limitado a los primeros 20 registrados. Complete el formulario de reserva; su código de acceso gratuito le será enviado por correo electrónico una vez validado.",
+    betaPromoTag: "Oferta Beta: Gratis para los primeros 20",
     billingPeriod: {
       monthly: "/ mes",
       annual: "/ mes",
@@ -590,8 +598,8 @@ const ES = {
     title: "Una solución inmobiliaria provincial de nueva generación",
     subtitle: "Descubra cómo nuestra tecnología optimiza la contabilidad de inversores, trabajadores autónomos y sindicatos en Quebec.",
     magic: {
-      title: "Simplificación fiscal: Generación del Relevé 31",
-      desc: "Simplifique sus envíos fiscales y la gestión de sus inmuebles en todo Quebec. \n\nOptimice su transparencia gracias a nuestros Enlaces Mágicos cifrados: los administradores de sindicatos pueden compartir instantáneamente los estados financieros y movimientos administrativos con los copropietarios, sin una compleja gestión de contraseñas.\n\nPara los propietarios de Plex, disfruten de un acceso dual colaborativo: compartan sus informaciones con sus socios en tiempo real a través de su espacio Cloud seguro. Sus documentos están centralizados, automáticamente organizados por fecha y carpeta, y accesibles en cualquier momento. La automatización inteligente de AutoCompt transforma su gestión administrativa en un proceso fluido y perfectamente estructurado.",
+      title: "Simplificación fiscal: Gestión del Relevé 31",
+      desc: "Gestión del Relevé 31: Reciba alertas para sus fechas límite y facilite la distribución de documentos a sus inquilinos. (El documento oficial debe producirse directamente en el sitio web de Revenu Québec).",
     },
     drive: {
       title: "Integración Cloud flexible",
@@ -599,7 +607,7 @@ const ES = {
     },
     doculegal: {
       title: "DocuLegal: Su centro de control y firma digital.",
-      desc: "Centralice, proteja y firme digitalmente sus documentos inmobiliarios privados en un solo lugar. DocuLegal le permite firmar sus promesas de compra y contratos privados con total validez legal, mientras organiza automáticamente sus documentos, Relevés 31 y facturas en carpetas inteligentes estructuradas por dirección y fecha directamente en su espacio seguro en la nube.",
+      desc: "Centralice, proteja y firme digitalmente sus documentos inmobiliarios privados en un solo lugar. DocuLegal le permite firmar sus promesas de compra y contratos privados con total validez legal, mientras organiza automáticamente sus documentos (promesas de compra, recibos de Relevé 31, facturas) en carpetas inteligentes estructuradas por dirección y fecha directamente en su espacio seguro en la nube.",
     }
   },
   simulators: {
@@ -629,15 +637,15 @@ const ES = {
       netExpense: "Costo neto tras reembolso de impuestos",
     },
     magic: {
-      title: "Generador de Relevé 31 por IA",
-      desc: "Visualice la generación automática del Relevé 31 para Revenu Québec. Ingrese el correo del inquilino para simular la creación de su formulario fiscal y el envío de su enlace de acceso seguro.",
+      title: "Simulador de distribución del Relevé 31",
+      desc: "Visualice el seguimiento y la distribución del Relevé 31. Ingrese el correo del inquilino para simular la distribución del documento fiscal y el envío de su enlace de acceso seguro. (El documento oficial debe producirse directamente en el sitio web de Revenu Québec).",
       emailLabel: "Correo del inquilino",
       placeholder: "inquilino@miinmueble.ca",
-      btn: "Generar y enviar el Relevé 31",
-      generating: "Generación automática del Relevé 31 en curso...",
-      success: "¡Relevé 31 generado con éxito! Enviado a través de enlace seguro.",
-      previewLabel: "Enlace seguro de Relevé 31 generado:",
-      actionBtn: "Copiar enlace de Relevé 31",
+      btn: "Simular el envío del Relevé 31",
+      generating: "Preparando la distribución del Relevé 31 en curso...",
+      success: "¡Relevé 31 distribuido con éxito! Enviado a través de enlace seguro de consulta.",
+      previewLabel: "Enlace seguro de Relevé 31 distribuido:",
+      actionBtn: "Copiar enlace de acceso",
       copied: "¡Enlace copiado!",
     },
   },
@@ -661,6 +669,7 @@ const ES = {
     privacy: "Política de privacidad",
     terms: "Condiciones de uso",
     contact: "Contáctenos",
+    legalNotice: "AutoCompt es una herramienta tecnológica de organización. Esta plataforma no reemplaza a su contador ni a su ingeniero. Facilita la centralización de sus documentos para una gestión profesional.",
   },
   support: {
     title: "Sofi, nuestro soporte inteligente, disponible 24/7.",

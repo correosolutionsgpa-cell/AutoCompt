@@ -1120,6 +1120,14 @@ export default function App() {
             {t.pricing.subtitle}
           </p>
 
+          {/* Beta Program Banner */}
+          <div className="mt-6 max-w-2xl mx-auto rounded-2xl border border-emerald-500/20 bg-emerald-50/50 p-4 dark:bg-emerald-950/10 dark:border-emerald-500/20 shadow-sm flex items-center justify-center gap-3">
+            <Sparkles className="w-5 h-5 text-emerald-500 shrink-0" />
+            <p className="text-xs md:text-sm font-semibold text-emerald-800 dark:text-emerald-400 text-left">
+              {t.pricing.betaInfo}
+            </p>
+          </div>
+
           {/* Audience selector */}
           <div className="flex justify-center mb-6">
             <div className={`inline-flex rounded-2xl p-1 border transition-all ${theme === 'dark' ? 'bg-zinc-900/60 border-zinc-800' : 'bg-slate-100 border-slate-200'}`}>
@@ -1229,22 +1237,25 @@ export default function App() {
                   
                   {/* Pricing price */}
                   <div className="my-6">
-                    <span className={`text-4xl font-black font-mono ${isPremium ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
-                      ${price}
-                    </span>
-                    <span className={`text-xs font-medium ${isPremium ? 'text-zinc-400' : theme === 'dark' ? 'text-zinc-400' : 'text-slate-500'}`}>
-                      {billingLabel}
-                    </span>
+                    <div className="flex items-baseline gap-2">
+                      <span className={`text-4xl font-black font-mono ${isPremium ? 'text-white' : 'text-slate-900 dark:text-white'}`}>
+                        $0
+                      </span>
+                      <span className={`text-sm line-through font-semibold font-mono ${isPremium ? 'text-zinc-400' : 'text-slate-400 dark:text-zinc-500'}`}>
+                        ${price}
+                      </span>
+                      <span className={`text-xs font-medium ${isPremium ? 'text-zinc-400' : theme === 'dark' ? 'text-zinc-400' : 'text-slate-500'}`}>
+                        {billingLabel}
+                      </span>
+                    </div>
                     {billing === 'annual' && plan.priceYearly && (
                       <div className={`text-[10px] font-bold mt-1 ${isPremium ? 'text-emerald-400' : 'text-emerald-600 dark:text-emerald-400'}`}>
                         {lang === 'FR' ? `Facturé ${plan.priceYearly}$ / an` : lang === 'ES' ? `Facturado ${plan.priceYearly}$ / año` : `Billed $${plan.priceYearly} / yr`}
                       </div>
                     )}
-                    {billing === 'monthly' && plan.promo && (
-                      <div className="text-[10px] text-rose-500 font-bold mt-1">
-                        {plan.promo}
-                      </div>
-                    )}
+                    <div className="mt-2.5 inline-block bg-white text-zinc-950 font-extrabold text-[10px] px-2.5 py-1.5 rounded-lg border-2 border-emerald-500 shadow-md uppercase tracking-wider select-none animate-pulse">
+                      {t.pricing.betaPromoTag}
+                    </div>
                   </div>
 
                   <div className={`h-px my-6 ${isPremium ? 'bg-emerald-500/20' : 'bg-zinc-800/10 dark:bg-zinc-800/60'}`} />
@@ -1261,53 +1272,6 @@ export default function App() {
                 </div>
 
                 <div>
-                  {/* Promo Code Input */}
-                  <div className="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800/60 text-left">
-                    <label className={`block text-[10px] font-bold mb-1.5 uppercase tracking-wider ${isPremium ? 'text-zinc-400' : 'text-slate-500 dark:text-zinc-400'}`}>
-                      {t.pricing.promoLabel}
-                    </label>
-                    <div className="flex gap-2">
-                      <input 
-                        type="text" 
-                        value={promoValues[plan.name] || ''} 
-                        onChange={(e) => {
-                          const val = e.target.value;
-                          setPromoValues(prev => ({ ...prev, [plan.name]: val }));
-                        }}
-                        placeholder="Ex: AUTO20" 
-                        className={`flex-1 min-w-0 px-3 py-1.5 text-xs rounded-xl border focus:outline-none focus:ring-1 focus:ring-emerald-500 ${
-                          isPremium 
-                            ? 'bg-zinc-900 border-zinc-850 text-white focus:border-emerald-500' 
-                            : 'bg-white dark:bg-zinc-950 text-slate-900 dark:text-white border-slate-200 dark:border-zinc-800'
-                        }`}
-                      />
-                      <button 
-                        onClick={() => {
-                          const code = (promoValues[plan.name] || '').trim().toUpperCase();
-                          if (code === 'WELCOME25' || code === 'AUTOCOMPT') {
-                            setPromoStatuses(prev => ({ ...prev, [plan.name]: 'success' }));
-                          } else if (code === '') {
-                            setPromoStatuses(prev => ({ ...prev, [plan.name]: '' }));
-                          } else {
-                            setPromoStatuses(prev => ({ ...prev, [plan.name]: 'error' }));
-                          }
-                        }}
-                        className="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 whitespace-nowrap"
-                      >
-                        {t.pricing.promoApply}
-                      </button>
-                    </div>
-                    {promoStatuses[plan.name] === 'success' && (
-                      <div className="text-[10px] mt-1.5 font-bold text-emerald-600 dark:text-emerald-400 animate-fadeIn">
-                        {t.pricing.promoSuccess}
-                      </div>
-                    )}
-                    {promoStatuses[plan.name] === 'error' && (
-                      <div className="text-[10px] mt-1.5 font-bold text-rose-500 animate-fadeIn">
-                        {t.pricing.promoInvalid}
-                      </div>
-                    )}
-                  </div>
 
                   <div className="mt-6">
                     <a 
@@ -1506,9 +1470,14 @@ export default function App() {
 
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-zinc-800/10 dark:border-zinc-900/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-semibold">
-          <p>{t.footer.rights}</p>
-          <p>{t.footer.madeIn}</p>
+        <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-zinc-800/10 dark:border-zinc-900/60">
+          <p className="text-[11px] leading-relaxed text-slate-400 dark:text-zinc-650 max-w-5xl mb-4 text-left">
+            {t.footer.legalNotice}
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-semibold">
+            <p>{t.footer.rights}</p>
+            <p>{t.footer.madeIn}</p>
+          </div>
         </div>
       </footer>
 

@@ -927,6 +927,14 @@ const htmlTemplate = `<!DOCTYPE html>
           ${t.pricing.subtitle}
         </p>
 
+        <!-- Beta Program Banner -->
+        <div class="mt-6 max-w-2xl mx-auto rounded-2xl border border-emerald-500/20 bg-emerald-50/50 p-4 dark:bg-emerald-950/10 dark:border-emerald-500/20 shadow-sm flex items-center justify-center gap-3">
+          <i data-lucide="sparkles" class="w-5 h-5 text-emerald-500 shrink-0"></i>
+          <p class="text-xs md:text-sm font-semibold text-emerald-800 dark:text-emerald-400 text-left" data-t="pricing.betaInfo">
+            ${t.pricing.betaInfo}
+          </p>
+        </div>
+
         <!-- Audience Selector Toggle -->
         <div class="flex justify-center mb-6 mt-6">
           <div class="inline-flex rounded-2xl p-1 border border-slate-200 bg-slate-100 dark:bg-zinc-900/60 dark:border-zinc-800">
@@ -972,9 +980,15 @@ const htmlTemplate = `<!DOCTYPE html>
             <p class="text-xs mt-2 leading-relaxed text-slate-500 dark:text-zinc-400">Spécialement conçu pour les Propriétaires de Plex (jusqu'à 4 portes) et Travailleurs autonomes. Sofi, notre assistance intelligente, disponible 24/7.</p>
             
             <div class="my-6">
-              <span class="text-4xl font-black font-mono text-slate-900 dark:text-white" id="price-owner-1">$14.99</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-zinc-400" id="period-owner-1">/ mois</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black font-mono text-slate-900 dark:text-white">$0</span>
+                <span class="text-sm text-slate-400 dark:text-zinc-500 line-through font-semibold font-mono" id="price-owner-1">$14.99</span>
+                <span class="text-xs font-medium text-slate-500 dark:text-zinc-400" id="period-owner-1">/ mois</span>
+              </div>
               <div class="text-[10px] font-bold mt-1 text-emerald-600 dark:text-emerald-400" id="yearly-billing-owner-1">Facturé 179.91$ / an</div>
+              <div class="mt-2.5 inline-block bg-white text-zinc-950 font-extrabold text-[10px] px-2.5 py-1.5 rounded-lg border-2 border-emerald-500 shadow-md uppercase tracking-wider select-none animate-pulse" data-t="pricing.betaPromoTag">
+                ${t.pricing.betaPromoTag}
+              </div>
             </div>
 
             <div class="h-px bg-zinc-800/10 dark:bg-zinc-800/60 my-6"></div>
@@ -985,15 +999,6 @@ const htmlTemplate = `<!DOCTYPE html>
           </div>
 
           <div>
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800/60 text-left">
-              <label class="block text-[10px] font-bold mb-1.5 uppercase tracking-wider text-slate-500 dark:text-zinc-400" data-t="pricing.promoLabel">Code promo</label>
-              <div class="flex gap-2">
-                <input type="text" id="promo-input-owner-1" placeholder="Ex: AUTO20" class="flex-1 min-w-0 px-3 py-1.5 text-xs rounded-xl border bg-white dark:bg-zinc-950 text-slate-900 dark:text-white border-slate-200 dark:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-emerald-500">
-                <button onclick="applyPromo('owner-1', 'Portes Ouvertes')" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 whitespace-nowrap">Appliquer</button>
-              </div>
-              <div id="promo-success-owner-1" class="hidden text-[10px] mt-1.5 font-bold text-emerald-600 dark:text-emerald-400 animate-fadeIn" data-t="pricing.promoSuccess">✓ Code appliqué !</div>
-              <div id="promo-error-owner-1" class="hidden text-[10px] mt-1.5 font-bold text-rose-500 animate-fadeIn" data-t="pricing.promoInvalid">✗ Code invalide</div>
-            </div>
             <div class="mt-6">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full py-4 text-xs rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/25">
                 <span data-t="pricing.cta">${t.pricing.cta}</span>
@@ -1014,9 +1019,15 @@ const htmlTemplate = `<!DOCTYPE html>
             <p class="text-xs mt-2 leading-relaxed text-zinc-300">Une solution complète pour vos investissements. Sofi, notre assistance intelligente, disponible 24/7.</p>
             
             <div class="my-6">
-              <span class="text-4xl font-black font-mono text-white" id="price-owner-2">$26.24</span>
-              <span class="text-xs font-medium text-zinc-400" id="period-owner-2">/ mois</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black font-mono text-white">$0</span>
+                <span class="text-sm text-zinc-400 line-through font-semibold font-mono" id="price-owner-2">$26.24</span>
+                <span class="text-xs font-medium text-zinc-400" id="period-owner-2">/ mois</span>
+              </div>
               <div class="text-[10px] font-bold mt-1 text-emerald-400" id="yearly-billing-owner-2">Facturé 314.91$ / an</div>
+              <div class="mt-2.5 inline-block bg-white text-zinc-950 font-extrabold text-[10px] px-2.5 py-1.5 rounded-lg border-2 border-emerald-500 shadow-md uppercase tracking-wider select-none animate-pulse" data-t="pricing.betaPromoTag">
+                ${t.pricing.betaPromoTag}
+              </div>
             </div>
 
             <div class="h-px bg-emerald-500/20 my-6"></div>
@@ -1027,15 +1038,6 @@ const htmlTemplate = `<!DOCTYPE html>
           </div>
 
           <div>
-            <div class="mt-6 pt-4 border-t border-slate-100/10 text-left">
-              <label class="block text-[10px] font-bold mb-1.5 uppercase tracking-wider text-zinc-400" data-t="pricing.promoLabel">Code promo</label>
-              <div class="flex gap-2">
-                <input type="text" id="promo-input-owner-2" placeholder="Ex: AUTO20" class="flex-1 min-w-0 px-3 py-1.5 text-xs rounded-xl border bg-zinc-900 border-zinc-850 text-white border-zinc-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
-                <button onclick="applyPromo('owner-2', 'Pro')" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 whitespace-nowrap">Appliquer</button>
-              </div>
-              <div id="promo-success-owner-2" class="hidden text-[10px] mt-1.5 font-bold text-emerald-400 animate-fadeIn" data-t="pricing.promoSuccess">✓ Code appliqué !</div>
-              <div id="promo-error-owner-2" class="hidden text-[10px] mt-1.5 font-bold text-rose-500 animate-fadeIn" data-t="pricing.promoInvalid">✗ Code invalide</div>
-            </div>
             <div class="mt-6">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full py-4 text-xs rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-black shadow-lg shadow-amber-400/25">
                 <span data-t="pricing.cta">${t.pricing.cta}</span>
@@ -1053,9 +1055,15 @@ const htmlTemplate = `<!DOCTYPE html>
             <p class="text-xs mt-2 leading-relaxed text-slate-500 dark:text-zinc-400">Croissance optimale et partenariats. Sofi, notre assistance intelligente, disponible 24/7.</p>
             
             <div class="my-6">
-              <span class="text-4xl font-black font-mono text-slate-900 dark:text-white" id="price-owner-3">$37.49</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-zinc-400" id="period-owner-3">/ mois</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black font-mono text-slate-900 dark:text-white">$0</span>
+                <span class="text-sm text-slate-400 dark:text-zinc-500 line-through font-semibold font-mono" id="price-owner-3">$37.49</span>
+                <span class="text-xs font-medium text-slate-500 dark:text-zinc-400" id="period-owner-3">/ mois</span>
+              </div>
               <div class="text-[10px] font-bold mt-1 text-emerald-600 dark:text-emerald-400" id="yearly-billing-owner-3">Facturé 449.91$ / an</div>
+              <div class="mt-2.5 inline-block bg-white text-zinc-950 font-extrabold text-[10px] px-2.5 py-1.5 rounded-lg border-2 border-emerald-500 shadow-md uppercase tracking-wider select-none animate-pulse" data-t="pricing.betaPromoTag">
+                ${t.pricing.betaPromoTag}
+              </div>
             </div>
 
             <div class="h-px bg-zinc-800/10 dark:bg-zinc-800/60 my-6"></div>
@@ -1066,15 +1074,6 @@ const htmlTemplate = `<!DOCTYPE html>
           </div>
 
           <div>
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800/60 text-left">
-              <label class="block text-[10px] font-bold mb-1.5 uppercase tracking-wider text-slate-500 dark:text-zinc-400" data-t="pricing.promoLabel">Code promo</label>
-              <div class="flex gap-2">
-                <input type="text" id="promo-input-owner-3" placeholder="Ex: AUTO20" class="flex-1 min-w-0 px-3 py-1.5 text-xs rounded-xl border bg-white dark:bg-zinc-950 text-slate-900 dark:text-white border-slate-200 dark:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-emerald-500">
-                <button onclick="applyPromo('owner-3', 'Multi-Entreprise')" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 whitespace-nowrap">Appliquer</button>
-              </div>
-              <div id="promo-success-owner-3" class="hidden text-[10px] mt-1.5 font-bold text-emerald-600 dark:text-emerald-400 animate-fadeIn" data-t="pricing.promoSuccess">✓ Code appliqué !</div>
-              <div id="promo-error-owner-3" class="hidden text-[10px] mt-1.5 font-bold text-rose-500 animate-fadeIn" data-t="pricing.promoInvalid">✗ Code invalide</div>
-            </div>
             <div class="mt-6">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full py-4 text-xs rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/25">
                 <span data-t="pricing.cta">${t.pricing.cta}</span>
@@ -1097,9 +1096,15 @@ const htmlTemplate = `<!DOCTYPE html>
             <p class="text-xs mt-2 leading-relaxed text-slate-500 dark:text-zinc-400">Pour les petits et moyens syndicats de copropriété. Sofi, notre assistance intelligente, disponible 24/7.</p>
             
             <div class="my-6">
-              <span class="text-4xl font-black font-mono text-slate-900 dark:text-white" id="price-syndicate-1">$22.49</span>
-              <span class="text-xs font-medium text-slate-500 dark:text-zinc-400" id="period-syndicate-1">/ mois</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black font-mono text-slate-900 dark:text-white">$0</span>
+                <span class="text-sm text-slate-400 dark:text-zinc-500 line-through font-semibold font-mono" id="price-syndicate-1">$22.49</span>
+                <span class="text-xs font-medium text-slate-500 dark:text-zinc-400" id="period-syndicate-1">/ mois</span>
+              </div>
               <div class="text-[10px] font-bold mt-1 text-emerald-600 dark:text-emerald-400" id="yearly-billing-syndicate-1">Facturé 269.91$ / an</div>
+              <div class="mt-2.5 inline-block bg-white text-zinc-950 font-extrabold text-[10px] px-2.5 py-1.5 rounded-lg border-2 border-emerald-500 shadow-md uppercase tracking-wider select-none animate-pulse" data-t="pricing.betaPromoTag">
+                ${t.pricing.betaPromoTag}
+              </div>
             </div>
 
             <div class="h-px bg-zinc-800/10 dark:bg-zinc-800/60 my-6"></div>
@@ -1110,15 +1115,6 @@ const htmlTemplate = `<!DOCTYPE html>
           </div>
 
           <div>
-            <div class="mt-6 pt-4 border-t border-slate-100 dark:border-zinc-800/60 text-left">
-              <label class="block text-[10px] font-bold mb-1.5 uppercase tracking-wider text-slate-500 dark:text-zinc-400" data-t="pricing.promoLabel">Code promo</label>
-              <div class="flex gap-2">
-                <input type="text" id="promo-input-syndicate-1" placeholder="Ex: AUTO20" class="flex-1 min-w-0 px-3 py-1.5 text-xs rounded-xl border bg-white dark:bg-zinc-950 text-slate-900 dark:text-white border-slate-200 dark:border-zinc-800 focus:outline-none focus:ring-1 focus:ring-emerald-500">
-                <button onclick="applyPromo('syndicate-1', 'Syndicat Essentiel')" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 whitespace-nowrap">Appliquer</button>
-              </div>
-              <div id="promo-success-syndicate-1" class="hidden text-[10px] mt-1.5 font-bold text-emerald-600 dark:text-emerald-400 animate-fadeIn" data-t="pricing.promoSuccess">✓ Code appliqué !</div>
-              <div id="promo-error-syndicate-1" class="hidden text-[10px] mt-1.5 font-bold text-rose-500 animate-fadeIn" data-t="pricing.promoInvalid">✗ Code invalide</div>
-            </div>
             <div class="mt-6">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full py-4 text-xs rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all bg-emerald-500 hover:bg-emerald-600 text-white font-bold shadow-lg shadow-emerald-500/25">
                 <span data-t="pricing.cta">${t.pricing.cta}</span>
@@ -1139,9 +1135,15 @@ const htmlTemplate = `<!DOCTYPE html>
             <p class="text-xs mt-2 leading-relaxed text-zinc-300">Gouvernance et maintenance complètes du syndicat. Sofi, notre assistance intelligente, disponible 24/7.</p>
             
             <div class="my-6">
-              <span class="text-4xl font-black font-mono text-white" id="price-syndicate-2">$44.99</span>
-              <span class="text-xs font-medium text-zinc-400" id="period-syndicate-2">/ mois</span>
+              <div class="flex items-baseline gap-2">
+                <span class="text-4xl font-black font-mono text-white">$0</span>
+                <span class="text-sm text-zinc-400 line-through font-semibold font-mono" id="price-syndicate-2">$44.99</span>
+                <span class="text-xs font-medium text-zinc-400" id="period-syndicate-2">/ mois</span>
+              </div>
               <div class="text-[10px] font-bold mt-1 text-emerald-400" id="yearly-billing-syndicate-2">Facturé 539.91$ / an</div>
+              <div class="mt-2.5 inline-block bg-white text-zinc-950 font-extrabold text-[10px] px-2.5 py-1.5 rounded-lg border-2 border-emerald-500 shadow-md uppercase tracking-wider select-none animate-pulse" data-t="pricing.betaPromoTag">
+                ${t.pricing.betaPromoTag}
+              </div>
             </div>
 
             <div class="h-px bg-emerald-500/20 my-6"></div>
@@ -1152,15 +1154,6 @@ const htmlTemplate = `<!DOCTYPE html>
           </div>
 
           <div>
-            <div class="mt-6 pt-4 border-t border-slate-100/10 text-left">
-              <label class="block text-[10px] font-bold mb-1.5 uppercase tracking-wider text-zinc-400" data-t="pricing.promoLabel">Code promo</label>
-              <div class="flex gap-2">
-                <input type="text" id="promo-input-syndicate-2" placeholder="Ex: AUTO20" class="flex-1 min-w-0 px-3 py-1.5 text-xs rounded-xl border bg-zinc-900 border-zinc-850 text-white border-zinc-800 focus:outline-none focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500">
-                <button onclick="applyPromo('syndicate-2', 'Syndicat Gestion Complète')" class="px-3 py-1.5 bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs rounded-xl transition-all shadow-sm active:scale-95 whitespace-nowrap">Appliquer</button>
-              </div>
-              <div id="promo-success-syndicate-2" class="hidden text-[10px] mt-1.5 font-bold text-emerald-400 animate-fadeIn" data-t="pricing.promoSuccess">✓ Code appliqué !</div>
-              <div id="promo-error-syndicate-2" class="hidden text-[10px] mt-1.5 font-bold text-rose-500 animate-fadeIn" data-t="pricing.promoInvalid">✗ Code invalide</div>
-            </div>
             <div class="mt-6">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full py-4 text-xs rounded-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all bg-gradient-to-r from-amber-400 to-yellow-500 hover:from-amber-500 hover:to-yellow-600 text-zinc-950 font-black shadow-lg shadow-amber-400/25">
                 <span data-t="pricing.cta">${t.pricing.cta}</span>
@@ -1331,9 +1324,14 @@ const htmlTemplate = `<!DOCTYPE html>
 
       </div>
 
-      <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-slate-200 dark:border-zinc-900/60 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-semibold">
-        <p data-t="footer.rights">${t.footer.rights}</p>
-        <p data-t="footer.madeIn">${t.footer.madeIn}</p>
+      <div class="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-slate-200 dark:border-zinc-900/60">
+        <p class="text-[11px] leading-relaxed text-slate-400 dark:text-zinc-650 max-w-5xl mb-4 text-left" data-t="footer.legalNotice">
+          ${t.footer.legalNotice}
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] font-semibold">
+          <p data-t="footer.rights">${t.footer.rights}</p>
+          <p data-t="footer.madeIn">${t.footer.madeIn}</p>
+        </div>
       </div>
     </footer>
 
@@ -1365,7 +1363,7 @@ const htmlTemplate = `<!DOCTYPE html>
   <!-- INLINE SCRIPTS FOR PAGE INTERACTIVITY -->
   <script>
     // 1. Embed locales dictionary directly in the client script
-    const locales = ${JSON.stringify(locales.locales, null, 2)};
+    const locales = ${JSON.stringify(locales, null, 2)};
 
     let currentLang = 'FR';
     let currentTheme = 'light';
@@ -1485,6 +1483,9 @@ const htmlTemplate = `<!DOCTYPE html>
       
       // Run calculations and redraw to update localizations
       runSplitCalc();
+      
+      // Update dynamic price labels and promo badge text
+      updatePricingCardsDisplay();
       
       // Re-trigger icon rendering
       lucide.createIcons();
@@ -1781,22 +1782,6 @@ const htmlTemplate = `<!DOCTYPE html>
         document.getElementById('price-syndicate-2').innerText = '$' + (isAnnual ? s2.priceAnnual : s2.priceMonthly);
         document.getElementById('yearly-billing-syndicate-2').innerText = isAnnual ? (currentLang === 'FR' ? \`Facturé \${s2.priceYearly}$ / an\` : currentLang === 'ES' ? \`Facturado \${s2.priceYearly}$ / año\` : \`Billed \$\${s2.priceYearly} / yr\`) : '';
         document.getElementById('yearly-billing-syndicate-2').classList.toggle('hidden', !isAnnual);
-      }
-    }
-
-    // Promo code validation
-    function applyPromo(cardId, planName) {
-      const code = document.getElementById('promo-input-' + cardId).value.trim().toUpperCase();
-      const successEl = document.getElementById('promo-success-' + cardId);
-      const errorEl = document.getElementById('promo-error-' + cardId);
-
-      successEl.classList.add('hidden');
-      errorEl.classList.add('hidden');
-
-      if (code === 'WELCOME25' || code === 'AUTOCOMPT') {
-        successEl.classList.remove('hidden');
-      } else if (code !== '') {
-        errorEl.classList.remove('hidden');
       }
     }
   </script>

@@ -912,7 +912,7 @@ export default function App() {
                     <div className="flex items-center gap-3">
                       <div className="w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold">2</div>
                       <div className={`flex-1 p-3 rounded-2xl border ${theme === 'dark' ? 'bg-zinc-950/80 border-zinc-850' : 'bg-slate-50 border-slate-200'}`}>
-                        <p className="font-bold">SMS / Courriel sécurisé</p>
+                        <p className="font-bold">Courriel sécurisé</p>
                         <p className="text-[10px] text-indigo-500 font-mono">https://app.autocompt.ca/shared/p/tk_3910x...</p>
                       </div>
                     </div>

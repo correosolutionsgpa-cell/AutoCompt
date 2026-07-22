@@ -204,7 +204,7 @@ export default function App() {
             <a href="#features" className={`font-medium text-sm transition-colors hover:text-emerald-500 ${theme === 'dark' ? 'text-zinc-400' : 'text-slate-600'}`}>{t.nav.features}</a>
             <a href="#deepdive" className={`font-medium text-sm transition-colors hover:text-emerald-500 ${theme === 'dark' ? 'text-zinc-400' : 'text-slate-600'}`}>{t.nav.deepDive}</a>
             <a href="#simulators" className={`font-medium text-sm transition-colors hover:text-emerald-500 ${theme === 'dark' ? 'text-zinc-400' : 'text-slate-600'}`}>{t.nav.features + " Live"}</a>
-            <a href="#pricing" className={`font-medium text-sm transition-colors hover:text-emerald-500 ${theme === 'dark' ? 'text-zinc-400' : 'text-slate-600'}`}>{t.nav.pricing}</a>
+            {/* <a href="#pricing" className={`font-medium text-sm transition-colors hover:text-emerald-500 ${theme === 'dark' ? 'text-zinc-400' : 'text-slate-600'}`}>{t.nav.pricing}</a> */}
             <a href="#faq" className={`font-medium text-sm transition-colors hover:text-emerald-500 ${theme === 'dark' ? 'text-zinc-400' : 'text-slate-600'}`}>{t.nav.faq}</a>
           </div>
 
@@ -305,13 +305,13 @@ export default function App() {
             >
               {t.nav.features + " Live"}
             </a>
-            <a 
+            {/* <a 
               href="#pricing" 
               onClick={() => setMobileMenuOpen(false)}
               className={`font-semibold text-sm py-2 ${theme === 'dark' ? 'text-zinc-300' : 'text-slate-700'}`}
             >
               {t.nav.pricing}
-            </a>
+            </a> */}
             <a 
               href="#faq" 
               onClick={() => setMobileMenuOpen(false)}
@@ -1106,8 +1106,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* PRICING SECTION */}
-      <section id="pricing" className="py-24 max-w-7xl mx-auto px-6">
+      {/* PRICING SECTION - MASQUÉ */}
+      {/* <section id="pricing" className="py-24 max-w-7xl mx-auto px-6"> */}
         
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[10px] uppercase font-black tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full">
@@ -1295,7 +1295,7 @@ export default function App() {
 
         </div>
 
-      </section>
+      {/* </section> */}
 
       {/* FAQ SECTION WITH ACCORDION */}
       <section id="faq" className={`py-24 border-t transition-colors duration-300 ${theme === 'dark' ? 'bg-zinc-900/30 border-zinc-900' : 'bg-slate-100/50 border-slate-200'}`}>

@@ -1,0 +1,8 @@
+﻿
+IgnoreCase LineNumber Line                           Filename Path                                                 Patt
+                                                                                                                   ern 
+---------- ---------- ----                           -------- ----                                                 ----
+      True      15103   if (vista === "kilometraje") App.tsx  C:\Users\Fabiola\Downloads\app.autocompt\src\App.tsx v...
+
+
+

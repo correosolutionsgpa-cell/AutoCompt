@@ -1,0 +1,18 @@
+﻿
+LineNumber Line                                                                            
+---------- ----                                                                            
+      2120       const res = await fetch("/api/chat", {                                    
+      4892       let response = await fetch(                                               
+      4916         response = await fetch(                                                 
+      5043         // Step C: Trigger /api/scan OCR or direct Client-side Gemini Vision OCR
+      5057           const response = await fetch(url, {                                   
+      5136             "[AutoCompt OCR Pipeline] Fetching server-side proxy /api/scan...", 
+      5139             const response = await fetch("/api/scan", {                         
+      6126         const folderSearch = await fetch(                                       
+      6136           const createFolder = await fetch(                                     
+      6157       const createResponse = await fetch(                                       
+      6177           await fetch(                                                          
+      6234       await fetch(                                                              
+
+
+

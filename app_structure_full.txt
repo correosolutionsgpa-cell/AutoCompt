@@ -1,0 +1,18 @@
+﻿
+LineNumber Type  Name               Content                                                                            
+---------- ----  ----               -------                                                                            
+       102 const CHARTS_COLORS      const CHARTS_COLORS = [                                                            
+       114 const GOOGLE_API_KEY     const GOOGLE_API_KEY = "AIzaSyCcBC28kAjjTNbAt0MO0z8ebQP9ykHqWng";                  
+       115 const GOOGLE_CLIENT_ID   const GOOGLE_CLIENT_ID =                                                           
+       117 const GEMINI_API_KEY     const GEMINI_API_KEY: string = "";                                                 
+       122 const firebaseConfig     const firebaseConfig = {                                                           
+       190 const LogoPrincipal      const LogoPrincipal = ({                                                           
+       250 const getCategoryInfo    const getCategoryInfo = (cat: string) => {                                         
+       436 const SignatureDrawPad   const SignatureDrawPad = ({                                                        
+       564 const ScrollToTopOnMount const ScrollToTopOnMount = () => {                                                 
+       571 const ConditionsModal    const ConditionsModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => ...
+       608 const PolitiqueModal     const PolitiqueModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => v...
+       650 const App                const App = () => {                                                                
+
+
+

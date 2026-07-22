@@ -1,0 +1,8 @@
+﻿
+LineNumber Line                                                                
+---------- ----                                                                
+      5546           const mapToDossierCategory = (appCat: string): string => {
+      5569             : mapToDossierCategory(finalCatMapped);                 
+
+
+

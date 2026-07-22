@@ -1,0 +1,6 @@
+{
+  "name": "AutoCompt",
+  "description": "L'application de comptabilité immobilière au Québec propulsée par l'IA. Automatisez le classement de vos dépenses et centralisez vos documents dans le cloud.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

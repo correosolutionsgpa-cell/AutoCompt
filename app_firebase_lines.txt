@@ -1,0 +1,106 @@
+﻿
+LineNumber Line                                                                                                        
+---------- ----                                                                                                        
+       120 // --- FIREBASE PLACEHOLDER CONFIGURATION ---                                                               
+       121 // Paste your Firebase credentials here when ready to connect to a real database.                           
+       122 const firebaseConfig = {                                                                                    
+       124   authDomain: 'YOUR_AUTH_DOMAIN',                                                                           
+      1341   const [doculegalTab, setDoculegalTab] = useState("Baux");                                                 
+      1974       author: "Sofi",                                                                                       
+      2111       author: activeUser,                                                                                   
+      2138           author: "Sofi",                                                                                   
+      2150           author: "Sofi",                                                                                   
+      2160   const [docActiveVue, setDocActiveVue] = useState<'contrats' | 'resolutions'>('contrats');                 
+      2161   const [docuSignInProgress, setDocuSignInProgress] = useState<any>(null);                                  
+      2162   const [docuLegalList, setDocuLegalList] = useState([                                                      
+      2169       author: "Fabiola Villegas",                                                                           
+      2185       author: "Fabiola Villegas",                                                                           
+      2202       author: "Fabiola Villegas",                                                                           
+      2218       author: "Achat Direct Inc.",                                                                          
+      2235       author: "Fabiola Villegas",                                                                           
+      2255   const [docFormName, setDocFormName] = useState("");                                                       
+      2256   const [docFormFolder, setDocFormFolder] = useState("");                                                   
+      2257   const [docFormRecipient, setDocFormRecipient] = useState("");                                             
+      2258   const [docFormEmail, setDocFormEmail] = useState("");                                                     
+      2259   const [docFormPhone, setDocFormPhone] = useState("");                                                     
+      2260   const [docFormContent, setDocFormContent] = useState("");                                                 
+      2261   const [docFormSmsVerify, setDocFormSmsVerify] = useState(true);                                           
+      2262   const [docFormEmailInvite, setDocFormEmailInvite] = useState("");                                         
+      2263   const [docSimulatedFile, setDocSimulatedFile] = useState<string | null>(null);                            
+      2264   const [docPlacedFields, setDocPlacedFields] = useState<any[]>([                                           
+      2278   const [docSignerActive, setDocSignerActive] = useState("Natalia Lopez");                                  
+      2312   const [docLogo, setDocLogo] = useState<string | null>(null);                                              
+      2314   const [docuFilterTab, setDocuFilterTab] = useState<string>("all");                                        
+      2643                   ${savedSignature ? `<img src="${savedSignature}" class="sig-img" />` : `<span style="fo...
+      2645                 <div class="sig-name">${auditedDoc.author}</div>                                            
+      2650                 .filter((s: any) => s.name !== auditedDoc.author)                                           
+      2701                 <div class="cert-label">Rôle d'authentification</div>                                       
+      2743   const [docFormSignersList, setDocFormSignersList] = useState<any[]>([                                     
+      3004   const [showAddDocModal, setShowAddDocModal] = useState(false);                                            
+      4628   const filteredBankByMonth = filterBySelectedMonth(                                                        
+      4731     let token = (window as any).gapi?.auth?.getToken()?.access_token;                                       
+      4741             "[Google Drive Auth] Utilisation du jeton d'accès mis en cache.",                               
+      4743           if ((window as any).gapi?.auth) {                                                                 
+      4744             (window as any).gapi.auth.setToken({ access_token: cached.token });                             
+      4755       "[Google Drive Auth] Aucun jeton valide en cache. Ouverture du sélecteur de consentement Google.",    
+      4761         "Les bibliothèques d'authentification Google (Identity Services) ne sont pas chargées.",            
+      4767         const tokenClient = google.accounts.oauth2.initTokenClient({                                        
+      4770             "https://www.googleapis.com/auth/spreadsheets https://www.googleapis.com/auth/drive.file",      
+      4790               if ((window as any).gapi?.auth) {                                                             
+      4791                 (window as any).gapi.auth.setToken({                                                        
+      4807             `Erreur lors de l'authentification Google OAuth : ${e.message || e}`,                           
+      4897             Authorization: `Bearer ${accessToken}`,                                                         
+      4910         if ((window as any).gapi?.auth) {                                                                   
+      4911           (window as any).gapi.auth.setToken(null);                                                         
+      4921               Authorization: `Bearer ${accessToken}`,                                                       
+      5719     // Play feedback sound immediately (son de capture on mobile)                                           
+      5756   const handleAuthorizeGoogleAndScan = async () => {                                                        
+      5768         throw new Error("Authentification échouée: Aucun jeton d'accès");                                   
+      5772         "Google Drive authorization failed during manual click, falling back to local OCR:",                
+      6005           ? filteredBankByMonth.map((t) => ({                                                               
+      6129             headers: { Authorization: `Bearer ${accessToken}` },                                            
+      6141                 Authorization: `Bearer ${accessToken}`,                                                     
+      6162             Authorization: `Bearer ${accessToken}`,                                                         
+      6181               headers: { Authorization: `Bearer ${accessToken}` },                                          
+      6239             Authorization: `Bearer ${accessToken}`,                                                         
+      9898                                 ? msg.author || "Utilisateur"                                               
+     10435                     onClick={handleAuthorizeGoogleAndScan}                                                  
+     10781             onClick={() => setDocActiveVue('resolutions')}                                                  
+     10792              <LivreDeSociete darkMode={darkMode} onBack={() => setDocActiveVue('contrats')} />              
+     10948                         setDocSimulatedFile(                                                                
+     10951                         setDocFormName("Contrat de Location - Apt. 3");                                     
+     10952                         setDocFormFolder(folders[0] || "Baux Locatifs");                                    
+     10953                         setDocFormRecipient("Richard Duchesne");                                            
+     10954                         setDocFormEmail("richard.duchesne@outlook.com");                                    
+     10955                         setDocFormPhone("514-555-8822");                                                    
+     10956                         setDocFormContent(                                                                  
+     10959                         setDocFormEmailInvite(                                                              
+     10962                         setDocFormSmsVerify(true);                                                          
+     11002                         setDocSimulatedFile(null);                                                          
+     11003                         setDocFormName("");                                                                 
+     11004                         setDocFormFolder(folders[0] || "");                                                 
+     11005                         setDocFormRecipient("");                                                            
+     11006                         setDocFormEmail("");                                                                
+     11007                         setDocFormPhone("");                                                                
+     11008                         setDocFormContent(                                                                  
+     11011                         setDocFormEmailInvite(                                                              
+     11014                         setDocFormSmsVerify(true);                                                          
+     11054                               setDocuFilterTab(tab.id);                                                     
+     11102                                   setDocFormName(doc.name);                                                 
+     11103                                   setDocFormFolder(doc.cat);                                                
+     11104                                   setDocFormRecipient(doc.recipient || "");                                 
+     11105                                   setDocFormEmail(doc.recipientEmail || "");                                
+     11106                                   setDocFormPhone(doc.recipientPhone || "");                                
+     11107                                   setDocFormContent(doc.content || "");                                     
+     11108                                   setDocFormEmailInvite(doc.emailInvite || "");                             
+     11109                                   setDocFormSmsVerify(doc.smsVerify ?? true);                               
+     11110                                   setDocFormSignersList(                                                    
+     11139                                   setDocLogo(doc.logo || null);                                             
+     11140                                   setDocPlacedFields(                                                       
+     11249                                             setDocuLegalList(                                               
+     11326                             setDocFormFolder(selectedDocuFolder || "");                                     
+     11327                             setDocFormName(                                                                 
+     11330                             setDocFormRecipient("");                                                        
+
+
+

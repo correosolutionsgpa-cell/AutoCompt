@@ -1,0 +1,18 @@
+﻿
+LineNumber Line                                                                                        
+---------- ----                                                                                        
+       102 const CHARTS_COLORS = [                                                                     
+       114 const GOOGLE_API_KEY = "AIzaSyCcBC28kAjjTNbAt0MO0z8ebQP9ykHqWng";                           
+       115 const GOOGLE_CLIENT_ID =                                                                    
+       117 const GEMINI_API_KEY: string = "";                                                          
+       122 const firebaseConfig = {                                                                    
+       190 const LogoPrincipal = ({                                                                    
+       250 const getCategoryInfo = (cat: string) => {                                                  
+       436 const SignatureDrawPad = ({                                                                 
+       564 const ScrollToTopOnMount = () => {                                                          
+       571 const ConditionsModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => {
+       608 const PolitiqueModal = ({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) => { 
+       650 const App = () => {                                                                         
+
+
+

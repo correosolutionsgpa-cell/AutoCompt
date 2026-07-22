@@ -2544,35 +2544,50 @@
       const isAnnual = billingCycle === 'annual';
 
       if (pricingAudience === 'owners') {
-        // Owner 1
         const o1 = tDict.pricing.proprietaires[0];
-        document.getElementById('price-owner-1').innerText = '$' + (isAnnual ? o1.priceAnnual : o1.priceMonthly);
-        document.getElementById('yearly-billing-owner-1').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o1.priceYearly}$ / año` : `Billed $${o1.priceYearly} / yr`) : '';
-        document.getElementById('yearly-billing-owner-1').classList.toggle('hidden', !isAnnual);
+        const po1 = document.getElementById('price-owner-1');
+        if (po1) po1.innerText = '$' + (isAnnual ? o1.priceAnnual : o1.priceMonthly);
+        const ybo1 = document.getElementById('yearly-billing-owner-1');
+        if (ybo1) {
+          ybo1.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o1.priceYearly}$ / año` : `Billed $${o1.priceYearly} / yr`) : '';
+          ybo1.classList.toggle('hidden', !isAnnual);
+        }
 
-        // Owner 2
         const o2 = tDict.pricing.proprietaires[1];
-        document.getElementById('price-owner-2').innerText = '$' + (isAnnual ? o2.priceAnnual : o2.priceMonthly);
-        document.getElementById('yearly-billing-owner-2').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o2.priceYearly}$ / año` : `Billed $${o2.priceYearly} / yr`) : '';
-        document.getElementById('yearly-billing-owner-2').classList.toggle('hidden', !isAnnual);
+        const po2 = document.getElementById('price-owner-2');
+        if (po2) po2.innerText = '$' + (isAnnual ? o2.priceAnnual : o2.priceMonthly);
+        const ybo2 = document.getElementById('yearly-billing-owner-2');
+        if (ybo2) {
+          ybo2.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o2.priceYearly}$ / año` : `Billed $${o2.priceYearly} / yr`) : '';
+          ybo2.classList.toggle('hidden', !isAnnual);
+        }
 
-        // Owner 3
-        const o3 = tDict.pricing.proprietaires[2];
-        document.getElementById('price-owner-3').innerText = '$' + (isAnnual ? o3.priceAnnual : o3.priceMonthly);
-        document.getElementById('yearly-billing-owner-3').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o3.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o3.priceYearly}$ / año` : `Billed $${o3.priceYearly} / yr`) : '';
-        document.getElementById('yearly-billing-owner-3').classList.toggle('hidden', !isAnnual);
+        const o3 = tDict.pricing.proprietaires[3];
+        const po3 = document.getElementById('price-owner-3');
+        if (po3) po3.innerText = '$' + (isAnnual ? o3.priceAnnual : o3.priceMonthly);
+        const ybo3 = document.getElementById('yearly-billing-owner-3');
+        if (ybo3) {
+          ybo3.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o3.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o3.priceYearly}$ / año` : `Billed $${o3.priceYearly} / yr`) : '';
+          ybo3.classList.toggle('hidden', !isAnnual);
+        }
       } else {
-        // Syndicate 1
         const s1 = tDict.pricing.syndicats[0];
-        document.getElementById('price-syndicate-1').innerText = '$' + (isAnnual ? s1.priceAnnual : s1.priceMonthly);
-        document.getElementById('yearly-billing-syndicate-1').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s1.priceYearly}$ / año` : `Billed $${s1.priceYearly} / yr`) : '';
-        document.getElementById('yearly-billing-syndicate-1').classList.toggle('hidden', !isAnnual);
+        const ps1 = document.getElementById('price-syndicate-1');
+        if (ps1) ps1.innerText = '$' + (isAnnual ? s1.priceAnnual : s1.priceMonthly);
+        const ybs1 = document.getElementById('yearly-billing-syndicate-1');
+        if (ybs1) {
+          ybs1.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s1.priceYearly}$ / año` : `Billed $${s1.priceYearly} / yr`) : '';
+          ybs1.classList.toggle('hidden', !isAnnual);
+        }
 
-        // Syndicate 2
         const s2 = tDict.pricing.syndicats[1];
-        document.getElementById('price-syndicate-2').innerText = '$' + (isAnnual ? s2.priceAnnual : s2.priceMonthly);
-        document.getElementById('yearly-billing-syndicate-2').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s2.priceYearly}$ / año` : `Billed $${s2.priceYearly} / yr`) : '';
-        document.getElementById('yearly-billing-syndicate-2').classList.toggle('hidden', !isAnnual);
+        const ps2 = document.getElementById('price-syndicate-2');
+        if (ps2) ps2.innerText = '$' + (isAnnual ? s2.priceAnnual : s2.priceMonthly);
+        const ybs2 = document.getElementById('yearly-billing-syndicate-2');
+        if (ybs2) {
+          ybs2.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s2.priceYearly}$ / año` : `Billed $${s2.priceYearly} / yr`) : '';
+          ybs2.classList.toggle('hidden', !isAnnual);
+        }
       }
     }
   </script>

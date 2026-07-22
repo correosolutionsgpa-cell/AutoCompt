@@ -1,0 +1,28 @@
+﻿
+LineNumber Content                                                                     
+---------- -------                                                                     
+       802 const handleAdresseChange = (e: React.ChangeEvent<HTMLInputElement>) => {   
+       810 const handleSaveLoyer = () => {                                             
+       841 const handleSavePlexExpense = () => {                                       
+       877 const handleSaveAutonomeExpense = () => {                                   
+      1235 const handleExportResumen = () => {                                         
+      1989 const handleApplyPromo = () => {                                            
+      2083 const handleSendChatMessage = async () => {                                 
+      2367 const handleExportPDF = (doc: any) => {                                     
+      3024 const handleEditInvoice = (fac: any) => {                                   
+      3058 const handleSendFacture = (fac: any) => {                                   
+      3138 const renderDuplicateModal = () => {                                        
+      3285 const renderTriplexSplitModal = () => {                                     
+      3537 const renderPretsActifsPanel = () => {                                      
+      3832 const renderLocatairesActifsPanel = () => {                                 
+      4694 const handleAddHomeExpense = (cat: string) => {                             
+      5711 const handleAIScan = async (event: React.ChangeEvent<HTMLInputElement>) => {
+      5756 const handleAuthorizeGoogleAndScan = async () => {                          
+      5787 const handleSkipDriveAndScan = () => {                                      
+      5795 const handleSimulateScan = () => {                                          
+      5846 const handleSaveTrip = () => {                                              
+      5889 const handleCSVUpload = (event: React.ChangeEvent<HTMLInputElement>) => {   
+      8340 const handleLoginSubmit = (emailStr: string) => {                           
+
+
+

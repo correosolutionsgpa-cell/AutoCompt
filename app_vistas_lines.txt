@@ -1,0 +1,106 @@
+﻿
+LineNumber Line                                                                                                        
+---------- ----                                                                                                        
+       258     case "Télécommunications":                                                                              
+       270     case "Équipement":                                                                                      
+       288     case "Taxes":                                                                                           
+       294     case "Assurance":                                                                                       
+       300     case "Chauffage":                                                                                       
+       306     case "Electricité":                                                                                     
+       330     case "Incidents":                                                                                       
+       342     case "Ventes":                                                                                          
+       957   const [vista, setVista] = useState("splash");                                                             
+      1033         setVista("dashboard");                                                                              
+      1050           setVista("dashboard");                                                                            
+      1052           setVista("benefits");                                                                             
+      1278         setVista("dashboard");                                                                              
+      1522                   setVista("benefits");                                                                     
+      1588                     setVista('setup');                                                                      
+      1620                     setVista("login");                                                                      
+      1689                                 setVista("dashboard");                                                      
+      1743                               setVista("setup");                                                            
+      1806                             setVista(item.id);                                                              
+      1832                                 setVista("dashboard");                                                      
+      1843                             setVista(item.id);                                                              
+      1907                         setVista("admin");                                                                  
+      1941                       setVista("login");                                                                    
+      5634              setVista("reportes");                                                                          
+      5749     setVista("reportes");                                                                                   
+      5836          setVista("reportes");                                                                              
+      6496                 setVista("level_selection");                                                                
+      6516                 setVista("dashboard");                                                                      
+      6548                 setVista("portal");                                                                         
+      6645                   setVista("pricing");                                                                      
+      6647                   setVista("rental_model");                                                                 
+      6689                 setVista("benefits");                                                                       
+      6700                 setVista("login");                                                                          
+      6786                 setVista("level_selection");                                                                
+      6797                 setVista("login");                                                                          
+      6920                 setVista("benefits");                                                                       
+      6932                 setVista("rental_model");                                                                   
+      7073                 setVista("level_selection");                                                                
+      7084                 setVista("pricing");                                                                        
+      7289                  onClick={() => { setActiveMobilePricingTab("porte_ouverte"); setSelectedTier("assistant"...
+      7344                  onClick={() => { setActiveMobilePricingTab("pro"); setSelectedTier("premium"); setVista(...
+      7394                <button onClick={() => { setActiveMobilePricingTab("multi_entreprise"); setSelectedTier("i...
+      7431                <button onClick={() => { setActiveMobilePricingTab("elite_condo"); setSelectedTier("syndic...
+      7473                <button onClick={() => { setActiveMobilePricingTab("elite_condo"); setSelectedTier("syndic...
+      7510                   setVista(dashboardMode === "Syndic" ? "level_selection" : "rental_model");                
+      7766                   setVista("pricing");                                                                      
+      7803                   setVista("dashboard");                                                                    
+      8164                 setVista("pricing");                                                                        
+      8207                   setVista("dashboard");                                                                    
+      8293                       setVista("dashboard");                                                                
+      8356         setVista("dashboard");                                                                              
+      8380       setVista("dashboard");                                                                                
+      8410                 setVista("benefits");                                                                       
+      8594                   onClick={() => setVista("dashboard")}                                                     
+      8604                   onClick={() => setVista("login")}                                                         
+      8646                   onClick={() => setVista("equipe")}                                                        
+      8666               onClick={() => setVista("equipe")}                                                            
+      8893                       setVista("banque");                                                                   
+      8956                       action: () => setVista("kilometraje"),                                                
+      8969                       action: () => setVista("taxes"),                                                      
+      8984                       action: () => setVista("homeoffice"),                                                 
+      9000                       action: () => setVista("doculegal"),                                                  
+      9016                       action: () => setVista("banque"),                                                     
+      9034                       action: () => setVista("sous-traitance"),                                             
+      9046                       action: () => setVista("facturas"),                                                   
+      9052                       action: () => setVista("reportes"),                                                   
+      9117                             setVista("reportes");                                                           
+      9150                             setVista("reportes");                                                           
+      9186               onClick={() => setVista("kilometraje")}                                                       
+      9564                 onClick={() => setVista("contrats")}                                                        
+      9578                 onClick={() => setVista("transparence")}                                                    
+      9592                 onClick={() => setVista("muro")}                                                            
+      9606                 onClick={() => setVista("settings")}                                                        
+      9623                 onClick={() => setVista("facturas")}                                                        
+      9636                 onClick={() => setVista("reportes")}                                                        
+      9649                 onClick={() => setVista("homeoffice")}                                                      
+      9662                 onClick={() => setVista("taxes")}                                                           
+      9680                     setVista("dashboard");                                                                  
+      9690                   setVista("doculegal");                                                                    
+      9713                 onClick={() => setVista("dossiers")}                                                        
+      9728                 onClick={() => setVista("heures-paie")}                                                     
+      9743                 onClick={() => setVista("banque")}                                                          
+      9758                 onClick={() => setVista("plex")}                                                            
+      9785                 onClick={() => setVista("taxes_assurances")}                                                
+     10768                   setVista("dashboard");                                                                    
+     13225               onClick={() => setVista("dashboard")}                                                         
+     13268                 setVista("rapports");                                                                       
+     13992                 setVista={setVista}                                                                         
+     14007                     setVista("banque");                                                                     
+     14084                                   onClick={() => setVista("banque")}                                        
+     14812             onClick={() => setVista("dashboard")}                                                           
+     15122             onClick={() => setVista("dashboard")}                                                           
+     15514                 else setVista("dashboard");                                                                 
+     17282           setVista={setVista}                                                                               
+     17310           <button onClick={() => setVista("dashboard")} className={`p-2 transition-colors ${darkMode ? "t...
+     17808                         setVista("pricing");                                                                
+     17871             onClick={() => setVista("dashboard")}                                                           
+     18404             setVista={setVista}                                                                             
+     18446             onClick={() => setVista("dashboard")}                                                           
+     18906               onClick={() => setVista("reportes")}                                                          
+
+
+

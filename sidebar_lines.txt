@@ -1,0 +1,7 @@
+﻿
+IgnoreCase LineNumber Line                               Filename Path                                                
+---------- ---------- ----                               -------- ----                                                
+      True       1442   const WorkspaceSidebar = () => { App.tsx  C:\Users\Fabiola\Downloads\app.autocompt\src\App.tsx
+
+
+

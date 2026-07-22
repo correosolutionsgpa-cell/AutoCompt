@@ -1,0 +1,8 @@
+﻿
+IgnoreCase LineNumber Line                                                                    Filename Path            
+---------- ---------- ----                                                                    -------- ----            
+      True       1258     if (vista === "dashboard" || vista === "welcome" || setupComplet) { App.tsx  C:\Users\Fabi...
+      True       8681   if (vista === "dashboard")                                            App.tsx  C:\Users\Fabi...
+
+
+

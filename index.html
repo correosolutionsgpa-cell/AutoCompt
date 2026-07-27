@@ -1492,8 +1492,10 @@
       });
     </script>
 
-    <!-- STICKY CTA FLOATING BUTTON -->
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 bg-[#059669] hover:bg-[#047857] active:scale-95 transition-all text-white font-bold text-xs md:text-sm px-5 py-3 md:px-6 md:py-3.5 rounded-full shadow-lg shadow-emerald-500/30 ring-2 ring-emerald-500/20 flex items-center gap-2 group">
+    <!-- STICKY CTA FLOATING BUTTON — masqué quand le menu mobile est ouvert
+         (toggleMobileMenu() bascule aussi son id), sinon il se superposait
+         au bouton identique déjà présent dans le tiroir mobile. -->
+    <a id="sticky-cta-floating" href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 bg-[#059669] hover:bg-[#047857] active:scale-95 transition-all text-white font-bold text-xs md:text-sm px-5 py-3 md:px-6 md:py-3.5 rounded-full shadow-lg shadow-emerald-500/30 ring-2 ring-emerald-500/20 flex items-center gap-2 group">
       <span data-t="pricing.cta">Réserver mon accès gratuit (Limite de 20 places)</span>
       <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
     </a>
@@ -2372,16 +2374,19 @@
       const drawer = document.getElementById('mobile-drawer');
       const burger = document.getElementById('mobile-menu-hamburger');
       const close = document.getElementById('mobile-menu-close');
-      
+      const stickyCta = document.getElementById('sticky-cta-floating');
+
       const isOpen = !drawer.classList.contains('hidden');
       if (isOpen) {
         drawer.classList.add('hidden');
         close.classList.add('hidden');
         burger.classList.remove('hidden');
+        if (stickyCta) stickyCta.classList.remove('hidden');
       } else {
         drawer.classList.remove('hidden');
         burger.classList.add('hidden');
         close.classList.remove('hidden');
+        if (stickyCta) stickyCta.classList.add('hidden');
       }
     }
 

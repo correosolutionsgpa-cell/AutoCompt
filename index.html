@@ -62,10 +62,21 @@
     }
   </script>
 
-  <!-- Lucide Icons Library CDN -->
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Lucide Icons Library CDN — version fixée pour éviter qu'une mise à
+       jour amont ne casse silencieusement toutes les icônes du site
+       (trouvé 2026-08-13: Natalia n'a jamais vu le bouton hamburger sur
+       iPhone quand cette librairie n'a pas chargé). -->
+  <script src="https://unpkg.com/lucide@0.462.0"></script>
 
   <style>
+    /* Fallback glyph for the mobile menu button — if the Lucide CDN script
+       fails to load or is slow (seen on iPhone Safari with tracking
+       protection / content blockers), the <i data-lucide> tags stay empty
+       and the button looks blank. This shows a plain "☰" instead until/
+       unless Lucide actually injects its <svg> replacement. */
+    .icon-fallback-glyph { display: none; font-size: 18px; line-height: 1; }
+    .icon-fallback-btn:not(:has(svg)) .icon-fallback-glyph { display: inline-block; }
+
     /* Glassmorphism custom classes */
     .glassmorphism {
       background: rgba(24, 24, 27, 0.6);
@@ -205,9 +216,10 @@
             <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden"></i>
           </button>
 
-          <button onclick="toggleMobileMenu()" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-300">
+          <button onclick="toggleMobileMenu()" aria-label="Menu" class="icon-fallback-btn w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-300">
             <i data-lucide="menu" id="mobile-menu-hamburger" class="w-5 h-5"></i>
             <i data-lucide="x" id="mobile-menu-close" class="w-5 h-5 hidden"></i>
+            <span class="icon-fallback-glyph" aria-hidden="true">&#9776;</span>
           </button>
         </div>
 

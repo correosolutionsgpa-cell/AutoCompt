@@ -211,9 +211,10 @@
 
         <!-- Mobile Menu Button -->
         <div class="flex md:hidden items-center gap-3">
-          <button onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-indigo-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-yellow-400">
+          <button onclick="toggleTheme()" aria-label="Theme" class="icon-fallback-btn w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-indigo-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-yellow-400">
             <i data-lucide="moon" id="mobile-theme-icon-moon" class="w-4 h-4"></i>
             <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden"></i>
+            <span class="icon-fallback-glyph" aria-hidden="true">&#9789;</span>
           </button>
 
           <button onclick="toggleMobileMenu()" aria-label="Menu" class="icon-fallback-btn w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-300">

@@ -210,7 +210,14 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="flex md:hidden items-center gap-3">
+        <div class="flex md:hidden items-center gap-1.5">
+          <!-- Always-visible "Se connecter" — previously only reachable by
+               opening the hamburger drawer, so a returning user (who isn't
+               here for the marketing content) had no direct way in. Found
+               2026-08-13: a real user couldn't find this button at all. -->
+          <a href="https://autocompt-app.vercel.app/?login=1" class="font-semibold text-[11px] px-2.5 h-9 flex items-center rounded-xl bg-amber-500 hover:bg-amber-600 active:scale-[0.98] transition-all text-white shadow-lg shadow-amber-500/25 whitespace-nowrap">
+            Se connecter
+          </a>
           <button onclick="toggleTheme()" aria-label="Theme" class="icon-fallback-btn w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-indigo-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-yellow-400">
             <i data-lucide="moon" id="mobile-theme-icon-moon" class="w-4 h-4"></i>
             <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden"></i>

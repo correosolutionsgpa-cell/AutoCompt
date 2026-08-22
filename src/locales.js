@@ -15,6 +15,7 @@ const FR = {
     ctaPrimary: "Optimiser ma comptabilité gratuitement",
     ctaSecondary: "Tester le simulateur live",
     info: "Aucune carte de crédit requise. Démarrez votre essai gratuit de 30 jours.",
+    dataOwnership: "Vous restez <strong>toujours propriétaire de vos données</strong>. AutoCompt organise vos factures et documents directement dans votre propre espace cloud (Google Drive, OneDrive, Dropbox) — jamais enfermés chez nous.",
   },
   profiles: {
     title: "Un profil pour chaque réalité immobilière au Québec",
@@ -271,6 +272,7 @@ const EN = {
     ctaPrimary: "Optimize my accounting for free",
     ctaSecondary: "Test live simulator",
     info: "No credit card required. Start your 30-day free trial.",
+    dataOwnership: "You always remain the <strong>owner of your data</strong>. AutoCompt organizes your invoices and documents directly in your own cloud space (Google Drive, OneDrive, Dropbox) — never locked in with us.",
   },
   profiles: {
     title: "A profile for every real estate reality in Quebec",
@@ -527,6 +529,7 @@ const ES = {
     ctaPrimary: "Optimizar mi contabilidad gratis",
     ctaSecondary: "Probar el simulador en vivo",
     info: "No se requiere tarjeta de crédito. Comience su prueba gratuita de 30 días.",
+    dataOwnership: "Usted siempre sigue siendo el <strong>dueño de sus datos</strong>. AutoCompt organiza sus facturas y documentos directamente en su propio espacio en la nube (Google Drive, OneDrive, Dropbox) — nunca encerrados con nosotros.",
   },
   profiles: {
     title: "Un perfil para cada realidad inmobiliaria en Quebec",

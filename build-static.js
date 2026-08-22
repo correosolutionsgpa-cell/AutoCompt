@@ -283,6 +283,18 @@ const htmlTemplate = `<!DOCTYPE html>
             <span data-t="hero.info">${t.hero.info}</span>
           </p>
 
+          <!-- Data Ownership Highlight — la promesse centrale d'AutoCompt : vous
+               restez toujours propriétaire de vos données, organisées dans VOTRE
+               propre Google Drive/OneDrive/Dropbox, jamais enfermées chez nous. -->
+          <div class="inline-flex items-start gap-3 max-w-lg p-4 rounded-2xl border border-emerald-500/20 bg-emerald-50/60 dark:bg-emerald-950/15 dark:border-emerald-500/20">
+            <div class="w-8 h-8 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
+              <i data-lucide="key-round" class="w-4 h-4"></i>
+            </div>
+            <p class="text-xs font-semibold leading-relaxed text-emerald-800 dark:text-emerald-300" data-t="hero.dataOwnership">
+              ${t.hero.dataOwnership}
+            </p>
+          </div>
+
           <!-- Fast Stats Row -->
           <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-800/10 dark:border-zinc-800/50 max-w-lg">
             <div>

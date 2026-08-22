@@ -60,6 +60,10 @@ const FR = {
       title: "Coffre-fort DocuLegal",
       desc: "Conservez vos promesses d'achat, reçus et contrats dans un espace chiffré hautement sécurisé, garantissant une gestion simplifiée pour syndicat de copropriété et propriétaires.",
     },
+    ledger: {
+      title: "Tenue de livres organisée par édifice",
+      desc: "Chaque édifice a son propre grand livre, toujours à jour. Livrez à votre comptable une comptabilité déjà classée et organisée, à temps chaque mois — avec l'aide de Sofi pour trier vos reçus au fur et à mesure.",
+    },
   },
   pricing: {
     title: "Une tarification claire, adaptée à vos besoins",
@@ -198,16 +202,17 @@ const FR = {
       total: "Total extrait",
       success: "Extraction réussie ! Taxes québécoises (TPS/TVQ) isolées avec succès.",
     },
-    split: {
-      title: "Calculateur de répartition entre édifices",
-      desc: "Simulez la répartition d'une facture unique (ex : assurance, entretien) entre plusieurs édifices que vous gérez, avec calcul automatique de la part de taxes de chacun.",
-      billAmount: "Montant de la facture ($)",
-      partnerShare: "Répartition entre édifices",
-      yours: "Édifice A",
-      partners: "Édifice B",
-      tpsReclaim: "Part de TPS incluse",
-      tvqReclaim: "Part de TVQ incluse",
-      netExpense: "Total avant taxes",
+    sign: {
+      title: "Signez votre promesse d'achat depuis votre cellulaire",
+      desc: "Rédigez une promesse d'achat personnalisée et faites-la signer directement devant votre client, depuis votre téléphone — signature électronique légale, scellée par un hachage cryptographique unique.",
+      nameLabel: "Nom du signataire",
+      btn: "Simuler la signature",
+      generating: "Signature en cours...",
+      success: "Document signé et scellé avec succès !",
+      signedBy: "Signé par",
+      timestamp: "Horodatage",
+      hash: "Hachage du document",
+      footnote: "Chaque document DocuLegal est scellé par un hachage cryptographique unique — une preuve que le document n'a pas été modifié après signature.",
     },
     magic: {
       title: "Simulateur de confirmation du Relevé 31",
@@ -316,6 +321,10 @@ const EN = {
     vault: {
       title: "DocuLegal Vault",
       desc: "Store your purchase offers, receipts, and contracts in a highly secure encrypted space, ensuring simplified management for co-ownership syndicates and owners.",
+    },
+    ledger: {
+      title: "Bookkeeping organized by building",
+      desc: "Every building has its own always-up-to-date ledger. Hand your accountant bookkeeping that's already sorted and organized, on time every month — with Sofi's help classifying your receipts along the way.",
     },
   },
   pricing: {
@@ -455,16 +464,17 @@ const EN = {
       total: "Extracted total",
       success: "Extraction successful! Quebec taxes (GST/QST) isolated.",
     },
-    split: {
-      title: "Multi-Building Expense Split Calculator",
-      desc: "Simulate splitting a single invoice (e.g. insurance, maintenance) across several buildings you manage, with automatic calculation of each one's tax share.",
-      billAmount: "Invoice Amount ($)",
-      partnerShare: "Split between buildings",
-      yours: "Building A",
-      partners: "Building B",
-      tpsReclaim: "GST portion included",
-      tvqReclaim: "QST portion included",
-      netExpense: "Total before taxes",
+    sign: {
+      title: "Sign your purchase offer from your phone",
+      desc: "Draft a personalized purchase offer and have it signed directly in front of your client, from your phone — legal electronic signature, sealed with a unique cryptographic hash.",
+      nameLabel: "Signer's name",
+      btn: "Simulate the signature",
+      generating: "Signing in progress...",
+      success: "Document signed and sealed successfully!",
+      signedBy: "Signed by",
+      timestamp: "Timestamp",
+      hash: "Document hash",
+      footnote: "Every DocuLegal document is sealed with a unique cryptographic hash — proof the document hasn't been altered after signing.",
     },
     magic: {
       title: "Relevé 31 Confirmation Simulator",
@@ -573,6 +583,10 @@ const ES = {
     vault: {
       title: "Bóveda DocuLegal",
       desc: "Conserve sus promesas de compra, recibos y contratos en un espacio cifrado altamente seguro, garantizando una gestión simplificada para sindicatos de copropiedad y propietarios.",
+    },
+    ledger: {
+      title: "Contabilidad organizada por edificio",
+      desc: "Cada edificio tiene su propio libro mayor, siempre al día. Entregue a su contador una contabilidad ya clasificada y organizada, a tiempo cada mes — con la ayuda de Sofi para clasificar sus recibos sobre la marcha.",
     },
   },
   pricing: {
@@ -712,16 +726,17 @@ const ES = {
       total: "Total extraído",
       success: "¡Extracción exitosa! Impuestos quebequenses (TPS/TVQ) separados con éxito.",
     },
-    split: {
-      title: "Calculadora de reparto entre edificios",
-      desc: "Simule el reparto de una sola factura (ej. seguro, mantenimiento) entre varios edificios que usted gestiona, con cálculo automático de la parte de impuestos de cada uno.",
-      billAmount: "Monto de la factura ($)",
-      partnerShare: "Reparto entre edificios",
-      yours: "Edificio A",
-      partners: "Edificio B",
-      tpsReclaim: "Parte de TPS incluida",
-      tvqReclaim: "Parte de TVQ incluida",
-      netExpense: "Total antes de impuestos",
+    sign: {
+      title: "Firme su promesa de compra desde su celular",
+      desc: "Redacte una promesa de compra personalizada y hágala firmar directamente frente a su cliente, desde su teléfono — firma electrónica legal, sellada con un hash criptográfico único.",
+      nameLabel: "Nombre del firmante",
+      btn: "Simular la firma",
+      generating: "Firmando...",
+      success: "¡Documento firmado y sellado con éxito!",
+      signedBy: "Firmado por",
+      timestamp: "Fecha y hora",
+      hash: "Hash del documento",
+      footnote: "Cada documento de DocuLegal se sella con un hash criptográfico único — una prueba de que el documento no fue modificado después de la firma.",
     },
     magic: {
       title: "Simulador de confirmación del Relevé 31",

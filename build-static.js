@@ -381,8 +381,8 @@ const htmlTemplate = `<!DOCTYPE html>
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+
           <!-- Card 1 -->
           <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
             <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
@@ -413,6 +413,17 @@ const htmlTemplate = `<!DOCTYPE html>
             <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="features.vault.title">${t.features.vault.title}</h3>
             <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="features.vault.desc">
               ${t.features.vault.desc}
+            </p>
+          </div>
+
+          <!-- Card 4 — Tenue de livres par édifice, livrée à temps à votre comptable -->
+          <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+            <div class="w-12 h-12 rounded-2xl bg-blue-100 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6">
+              <i data-lucide="book-open" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="features.ledger.title">${t.features.ledger.title}</h3>
+            <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="features.ledger.desc">
+              ${t.features.ledger.desc}
             </p>
           </div>
 
@@ -637,105 +648,66 @@ const htmlTemplate = `<!DOCTYPE html>
 
         </div>
 
-        <!-- Right Simulators: Plex Calculator -->
+        <!-- Right Simulators: Mobile Signature (DocuLegal) -->
         <div class="lg:col-span-6">
           <div class="rounded-4xl p-8 border border-slate-200 bg-white shadow-md dark:bg-zinc-900/60 dark:border-zinc-800 glow-rose transition-all duration-300 h-full">
             <div class="flex items-center justify-between mb-6">
               <h3 class="text-lg font-bold text-slate-900 dark:text-white flex items-center gap-2">
-                <i data-lucide="calculator" class="w-5 h-5 text-rose-500"></i>
-                <span data-t="simulators.split.title">${t.simulators.split.title}</span>
+                <i data-lucide="smartphone" class="w-5 h-5 text-rose-500"></i>
+                <span data-t="simulators.sign.title">${t.simulators.sign.title}</span>
               </h3>
               <span class="px-2 py-0.5 rounded-full text-[9px] font-extrabold uppercase tracking-wide bg-rose-100 text-rose-700 dark:bg-rose-950/40 dark:text-rose-400">
-                Calcul Réel
+                DocuLegal
               </span>
             </div>
-            <p class="text-xs mb-6 leading-relaxed text-slate-600 dark:text-zinc-400" data-t="simulators.split.desc">
-              ${t.simulators.split.desc}
+            <p class="text-xs mb-6 leading-relaxed text-slate-600 dark:text-zinc-400" data-t="simulators.sign.desc">
+              ${t.simulators.sign.desc}
             </p>
 
-            <div class="space-y-6">
-              
-              <!-- Slider 1 -->
+            <form onsubmit="runSignDemo(event)" class="space-y-4">
               <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-zinc-400" data-t="simulators.split.billAmount">
-                    ${t.simulators.split.billAmount}
-                  </label>
-                  <span class="text-sm font-bold" id="split-bill-label">$1500</span>
-                </div>
-                <input type="range" id="split-bill-slider" min="100" max="10000" step="50" value="1500" oninput="runSplitCalc()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-emerald-500 dark:bg-zinc-800">
-                <div class="flex justify-between text-[9px] text-zinc-500 font-bold mt-1.5 font-mono">
-                  <span>$100</span>
-                  <span>$5,000</span>
-                  <span>$10,000</span>
-                </div>
+                <label class="block text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-zinc-400 mb-1.5" data-t="simulators.sign.nameLabel">
+                  ${t.simulators.sign.nameLabel}
+                </label>
+                <input type="text" id="sign-name-input" required placeholder="Jean Tremblay" class="w-full px-4 py-3 rounded-xl border text-xs outline-none bg-slate-50 border-slate-200 text-slate-800 focus:border-rose-500 focus:ring-1 focus:ring-rose-500 dark:bg-zinc-950 dark:border-zinc-800 dark:text-zinc-100">
               </div>
 
-              <!-- Slider 2 -->
-              <div>
-                <div class="flex justify-between items-center mb-2">
-                  <label class="text-[10px] font-black uppercase tracking-wider text-slate-500 dark:text-zinc-400" data-t="simulators.split.partnerShare">
-                    ${t.simulators.split.partnerShare}
-                  </label>
-                  <span class="text-sm font-bold" id="split-share-label">60% / 40%</span>
+              <button type="submit" id="sign-btn" class="w-full py-3.5 px-6 rounded-2xl font-bold text-xs flex items-center justify-center gap-2 bg-rose-500 hover:bg-rose-600 text-white shadow-lg shadow-rose-500/25 active:scale-[0.98] transition-all">
+                <i data-lucide="pen-tool" class="w-4 h-4"></i>
+                <span data-t="simulators.sign.btn">${t.simulators.sign.btn}</span>
+              </button>
+            </form>
+
+            <div id="sign-generating" class="hidden mt-4 flex items-center justify-center gap-2.5 py-6">
+              <div class="w-5 h-5 rounded-full border-[3px] border-rose-500 border-t-transparent animate-spin"></div>
+              <span class="text-xs font-mono text-rose-500 animate-pulse" data-t="simulators.sign.generating">${t.simulators.sign.generating}</span>
+            </div>
+
+            <div id="sign-result" class="hidden mt-4 rounded-2xl p-5 border text-xs space-y-3 bg-slate-50 border-slate-200 dark:bg-zinc-950/60 dark:border-zinc-800 animate-fadeIn">
+              <p class="font-extrabold text-emerald-500 flex items-center gap-1.5">
+                <i data-lucide="check-circle-2" class="w-4 h-4"></i>
+                <span data-t="simulators.sign.success">${t.simulators.sign.success}</span>
+              </p>
+              <div class="h-px bg-zinc-800/10 dark:bg-zinc-800/60"></div>
+              <div class="grid grid-cols-1 gap-y-2 font-mono text-[10px]">
+                <div class="flex justify-between">
+                  <span class="text-zinc-500" data-t="simulators.sign.signedBy">${t.simulators.sign.signedBy}:</span>
+                  <span class="font-semibold text-slate-800 dark:text-zinc-200" id="sign-val-name">Jean Tremblay</span>
                 </div>
-                <input type="range" id="split-share-slider" min="10" max="90" step="5" value="60" oninput="runSplitCalc()" class="w-full h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-indigo-500 dark:bg-zinc-800">
-                <div class="flex justify-between text-[9px] text-zinc-500 font-bold mt-1.5 font-mono">
-                  <span data-t="simulators.split.yours">${t.simulators.split.yours} (10%)</span>
-                  <span>50/50</span>
-                  <span data-t="simulators.split.partners">${t.simulators.split.partners} (10%)</span>
+                <div class="flex justify-between">
+                  <span class="text-zinc-500" data-t="simulators.sign.timestamp">${t.simulators.sign.timestamp}:</span>
+                  <span class="font-semibold text-slate-800 dark:text-zinc-200" id="sign-val-time">—</span>
+                </div>
+                <div class="flex justify-between">
+                  <span class="text-zinc-500" data-t="simulators.sign.hash">${t.simulators.sign.hash}:</span>
+                  <span class="font-semibold text-rose-600 dark:text-rose-400" id="sign-val-hash">—</span>
                 </div>
               </div>
+            </div>
 
-              <!-- Calculations Card -->
-              <div class="rounded-3xl p-6 border border-slate-200 bg-slate-50 dark:bg-zinc-950/60 dark:border-zinc-800 space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                  
-                  <div class="p-4 rounded-2xl border bg-white border-slate-200 text-center dark:bg-zinc-900/40 dark:border-zinc-800/80 transition-colors">
-                    <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">
-                      <span data-t="simulators.split.yours">${t.simulators.split.yours}</span> (<span id="calc-share-pct-1">60</span>%)
-                    </span>
-                    <span class="text-lg font-black text-slate-900 dark:text-white font-mono" id="calc-share-cost-1">$765.00</span>
-                  </div>
-
-                  <div class="p-4 rounded-2xl border bg-white border-slate-200 text-center dark:bg-zinc-900/40 dark:border-zinc-800/80 transition-colors">
-                    <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">
-                      <span data-t="simulators.split.partners">${t.simulators.split.partners}</span> (<span id="calc-share-pct-2">40</span>%)
-                    </span>
-                    <span class="text-lg font-black text-slate-900 dark:text-white font-mono" id="calc-share-cost-2">$510.00</span>
-                  </div>
-
-                </div>
-
-                <div class="h-px bg-zinc-800/10 dark:bg-zinc-800/60"></div>
-
-                <!-- Tax Details -->
-                <div class="space-y-2 text-xs font-semibold">
-                  <div class="flex justify-between text-emerald-600 dark:text-emerald-400">
-                    <span><span data-t="simulators.split.tpsReclaim">${t.simulators.split.tpsReclaim}</span> (5%):</span>
-                    <span class="font-mono" id="calc-tps-reclaim">+ $75.00</span>
-                  </div>
-                  <div class="flex justify-between text-emerald-600 dark:text-emerald-400">
-                    <span><span data-t="simulators.split.tvqReclaim">${t.simulators.split.tvqReclaim}</span> (9.975%):</span>
-                    <span class="font-mono" id="calc-tvq-reclaim">+ $149.63</span>
-                  </div>
-                  
-                  <div class="h-px bg-zinc-800/10 dark:bg-zinc-800/60 my-2"></div>
-
-                  <div class="flex justify-between text-slate-900 dark:text-white font-bold text-sm">
-                    <span data-t="simulators.split.netExpense">${t.simulators.split.netExpense}</span>
-                    <span class="font-mono text-emerald-500" id="calc-net-cost">$1275.38</span>
-                  </div>
-                </div>
-
-              </div>
-
-              <!-- Export CTA -->
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full py-4 bg-rose-500 hover:bg-rose-600 text-white font-bold text-xs rounded-2xl shadow-lg shadow-rose-500/25 active:scale-[0.98] transition-all flex items-center justify-center gap-2">
-                <i data-lucide="coins" class="w-4 h-4"></i>
-                <span>Exporter ce calcul sur mon compte Plex</span>
-                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
-              </a>
+            <p class="text-[10px] font-semibold mt-5 leading-relaxed text-slate-400 dark:text-zinc-500" data-t="simulators.sign.footnote">
+              ${t.simulators.sign.footnote}
+            </p>
 
             </div>
           </div>
@@ -1467,9 +1439,6 @@ const htmlTemplate = `<!DOCTYPE html>
         document.getElementById('logo-preview-canvas').classList.remove('hidden');
         document.getElementById('main-body').style.backgroundColor = '#ffffff';
         document.title = "AutoCompt | Logo Preview";
-      } else {
-        // Initialize other features
-        runSplitCalc();
       }
       lucide.createIcons();
     });
@@ -1568,10 +1537,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
       // Update translatable lists (Pricing cards features)
       updatePricingFeatures(tDict);
-      
-      // Run calculations and redraw to update localizations
-      runSplitCalc();
-      
+
       // Update dynamic price labels and promo badge text
       updatePricingCardsDisplay();
       
@@ -1751,28 +1717,39 @@ const htmlTemplate = `<!DOCTYPE html>
       }
     }
 
-    // Split Calculator
-    function runSplitCalc() {
-      const billAmount = Number(document.getElementById('split-bill-slider').value);
-      const splitPercent = Number(document.getElementById('split-share-slider').value);
+    // Mobile Signature Demo (DocuLegal) — simulates signing a personalized
+    // Promesse d'Achat from a phone, in front of the client, sealed by a
+    // cryptographic hash (same real mechanic as DocuLegal's e-signature flow).
+    function runSignDemo(e) {
+      e.preventDefault();
+      const name = document.getElementById('sign-name-input').value;
+      if (!name) return;
 
-      document.getElementById('split-bill-label').innerText = '$' + billAmount;
-      document.getElementById('split-share-label').innerText = splitPercent + '% / ' + (100 - splitPercent) + '%';
+      const btn = document.getElementById('sign-btn');
+      const generating = document.getElementById('sign-generating');
+      const result = document.getElementById('sign-result');
 
-      const calcTps = parseFloat((billAmount * 0.05).toFixed(2));
-      const calcTvq = parseFloat((billAmount * 0.09975).toFixed(2));
-      const netExpense = parseFloat((billAmount - (calcTps + calcTvq)).toFixed(2));
-      const yourNetCost = parseFloat(((netExpense * splitPercent) / 100).toFixed(2));
-      const partnerNetCost = parseFloat(((netExpense * (100 - splitPercent)) / 100).toFixed(2));
+      btn.disabled = true;
+      btn.classList.add('bg-zinc-800', 'text-zinc-500', 'cursor-not-allowed');
+      btn.classList.remove('bg-rose-500', 'hover:bg-rose-600', 'text-white');
 
-      document.getElementById('calc-share-pct-1').innerText = splitPercent;
-      document.getElementById('calc-share-pct-2').innerText = 100 - splitPercent;
-      document.getElementById('calc-share-cost-1').innerText = '$' + yourNetCost.toFixed(2);
-      document.getElementById('calc-share-cost-2').innerText = '$' + partnerNetCost.toFixed(2);
-      
-      document.getElementById('calc-tps-reclaim').innerText = '+ $' + calcTps.toFixed(2);
-      document.getElementById('calc-tvq-reclaim').innerText = '+ $' + calcTvq.toFixed(2);
-      document.getElementById('calc-net-cost').innerText = '$' + netExpense.toFixed(2);
+      generating.classList.remove('hidden');
+      result.classList.add('hidden');
+
+      setTimeout(() => {
+        const hash = Array.from({length: 16}, () => Math.floor(Math.random() * 16).toString(16)).join('');
+        document.getElementById('sign-val-name').innerText = name;
+        document.getElementById('sign-val-time').innerText = new Date().toLocaleString('fr-CA', { dateStyle: 'short', timeStyle: 'short' });
+        document.getElementById('sign-val-hash').innerText = hash;
+
+        generating.classList.add('hidden');
+        result.classList.remove('hidden');
+
+        btn.disabled = false;
+        btn.classList.remove('bg-zinc-800', 'text-zinc-500', 'cursor-not-allowed');
+        btn.classList.add('bg-rose-500', 'hover:bg-rose-600', 'text-white');
+        lucide.createIcons();
+      }, 1400);
     }
 
     // FAQ Accordion

@@ -611,7 +611,7 @@ const htmlTemplate = `<!DOCTYPE html>
                   ${t.simulators.magic.previewLabel}
                 </span>
                 <div class="p-3 rounded-lg border font-mono text-[10px] select-all break-all overflow-x-auto bg-white border-slate-200 text-indigo-600 dark:bg-zinc-900 dark:border-zinc-800 dark:text-indigo-300" id="magic-generated-link">
-                  https://app.autocompt.ca/shared/releve31?token=xyz...
+                  https://app.autocompt.ca/sign/confirmation-releve31?token=xyz...
                 </div>
               </div>
 
@@ -688,7 +688,7 @@ const htmlTemplate = `<!DOCTYPE html>
 
                   <div class="p-4 rounded-2xl border bg-white border-slate-200 text-center dark:bg-zinc-900/40 dark:border-zinc-800/80 transition-colors">
                     <span class="text-[9px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500 block mb-1">
-                      <span>Partenaire</span> (<span id="calc-share-pct-2">40</span>%)
+                      <span data-t="simulators.split.partners">${t.simulators.split.partners}</span> (<span id="calc-share-pct-2">40</span>%)
                     </span>
                     <span class="text-lg font-black text-slate-900 dark:text-white font-mono" id="calc-share-cost-2">$510.00</span>
                   </div>
@@ -1688,8 +1688,8 @@ const htmlTemplate = `<!DOCTYPE html>
 
       setTimeout(() => {
         const secureToken = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
-        generatedLinkUrl = \`https://app.autocompt.ca/shared/releve31?token=\${secureToken}&email=\${encodeURIComponent(email)}\`;
-        
+        generatedLinkUrl = \`https://app.autocompt.ca/sign/confirmation-releve31?token=\${secureToken}&email=\${encodeURIComponent(email)}\`;
+
         document.getElementById('magic-generated-link').innerText = generatedLinkUrl;
 
         generating.classList.add('hidden');

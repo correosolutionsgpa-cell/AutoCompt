@@ -156,6 +156,7 @@ const htmlTemplate = `<!DOCTYPE html>
         <!-- Desktop Nav Items -->
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.features">${t.nav.features}</a>
+          <a href="#profiles" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500">Profils</a>
           <a href="#deepdive" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.deepDive">${t.nav.deepDive}</a>
           <a href="#simulators" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.simulators">${t.nav.simulators}</a>
           <a href="#pricing" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.pricing">${t.nav.pricing}</a>
@@ -285,16 +286,16 @@ const htmlTemplate = `<!DOCTYPE html>
           <!-- Fast Stats Row -->
           <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-800/10 dark:border-zinc-800/50 max-w-lg">
             <div>
-              <h3 class="text-xl md:text-2xl font-black text-emerald-500">99.4%</h3>
-              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Précision OCR</p>
+              <h3 class="text-xl md:text-2xl font-black text-emerald-500">6</h3>
+              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Profils immobiliers</p>
             </div>
             <div>
               <h3 class="text-xl md:text-2xl font-black text-emerald-500">100%</h3>
               <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Conforme Québec</p>
             </div>
             <div>
-              <h3 class="text-xl md:text-2xl font-black text-emerald-500">&lt; 3s</h3>
-              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Temps de scan</p>
+              <h3 class="text-xl md:text-2xl font-black text-emerald-500">30j</h3>
+              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Essai gratuit</p>
             </div>
           </div>
 
@@ -404,6 +405,81 @@ const htmlTemplate = `<!DOCTYPE html>
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <!-- PROFILES SECTION — mêmes 6 profils et mêmes couleurs que dans l'application réelle
+         (cyan=prospecteur, emerald=investisseur, amber=flippeur, indigo=gestionnaire,
+         purple=syndicat, blue=comptable) -->
+    <section id="profiles" class="py-24 max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[10px] uppercase font-black tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full">
+          6 Profils
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mt-4 text-slate-900 dark:text-white" data-t="profiles.title">
+          ${t.profiles.title}
+        </h2>
+        <p class="mt-3 text-base text-slate-600 dark:text-zinc-400" data-t="profiles.subtitle">
+          ${t.profiles.subtitle}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Prospecteur — cyan -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-cyan-100 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-5">
+            <i data-lucide="compass" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.prospecteur.title">${t.profiles.prospecteur.title}</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.prospecteur.desc">${t.profiles.prospecteur.desc}</p>
+        </div>
+
+        <!-- Investisseur — emerald -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-5">
+            <i data-lucide="building-2" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.investisseur.title">${t.profiles.investisseur.title}</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.investisseur.desc">${t.profiles.investisseur.desc}</p>
+        </div>
+
+        <!-- Flippeur — amber -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-5">
+            <i data-lucide="hammer" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.flippeur.title">${t.profiles.flippeur.title}</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.flippeur.desc">${t.profiles.flippeur.desc}</p>
+        </div>
+
+        <!-- Gestionnaire — indigo -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-indigo-100 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-5">
+            <i data-lucide="shield-check" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.gestionnaire.title">${t.profiles.gestionnaire.title}</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.gestionnaire.desc">${t.profiles.gestionnaire.desc}</p>
+        </div>
+
+        <!-- Syndicat — purple -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-purple-100 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-5">
+            <i data-lucide="landmark" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.syndicat.title">${t.profiles.syndicat.title}</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.syndicat.desc">${t.profiles.syndicat.desc}</p>
+        </div>
+
+        <!-- Comptable — blue -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-blue-100 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-5">
+            <i data-lucide="file-spreadsheet" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.comptable.title">${t.profiles.comptable.title}</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.comptable.desc">${t.profiles.comptable.desc}</p>
+        </div>
+
       </div>
     </section>
 
@@ -679,7 +755,7 @@ const htmlTemplate = `<!DOCTYPE html>
             
             <div class="lg:col-span-6 space-y-6 text-left">
               <span class="text-[10px] uppercase font-black tracking-wider text-indigo-700 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-950/40 px-3.5 py-1.5 rounded-full">
-                Accès sans mot de passe
+                Accès sécurisé par compte
               </span>
               <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-t="deepdive.magic.title">
                 ${t.deepdive.magic.title}
@@ -689,7 +765,7 @@ const htmlTemplate = `<!DOCTYPE html>
               </p>
               <div class="flex gap-4">
                 <div class="flex items-center gap-2 text-xs font-semibold text-emerald-500">
-                  <i data-lucide="check-circle-2" class="w-4 h-4"></i> Jetons cryptographiques à usage unique
+                  <i data-lucide="check-circle-2" class="w-4 h-4"></i> Relevés scellés, jamais modifiables
                 </div>
               </div>
             </div>
@@ -697,17 +773,17 @@ const htmlTemplate = `<!DOCTYPE html>
             <div class="lg:col-span-6 flex justify-center">
               <div class="w-full max-w-[480px] rounded-4xl border border-slate-200 bg-white p-8 shadow-xl relative overflow-hidden dark:bg-zinc-900/60 dark:border-zinc-800">
                 <div class="absolute top-0 right-0 p-4 opacity-15">
-                  <i data-lucide="share-2" class="w-32 h-32 text-indigo-500"></i>
+                  <i data-lucide="user-check" class="w-32 h-32 text-indigo-500"></i>
                 </div>
-                
+
                 <!-- Flow Chart Mockup -->
                 <div class="space-y-4 relative z-10 text-xs text-left">
-                  
+
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold">1</div>
                     <div class="flex-1 p-3 rounded-2xl border bg-slate-50 border-slate-200 dark:bg-zinc-950/80 dark:border-zinc-850">
-                      <p class="font-bold">CA de la Copropriété / Partenaire Plex</p>
-                      <p class="text-[10px] text-zinc-500">Génère un lien de consultation des dépenses</p>
+                      <p class="font-bold">Gestionnaire immobilier</p>
+                      <p class="text-[10px] text-zinc-500">Invite un client propriétaire par courriel</p>
                     </div>
                   </div>
 
@@ -716,8 +792,8 @@ const htmlTemplate = `<!DOCTYPE html>
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold">2</div>
                     <div class="flex-1 p-3 rounded-2xl border bg-slate-50 border-slate-200 dark:bg-zinc-950/80 dark:border-zinc-850">
-                      <p class="font-bold">SMS / Courriel sécurisé</p>
-                      <p class="text-[10px] text-indigo-500 font-mono">https://app.autocompt.ca/shared/p/tk_3910x...</p>
+                      <p class="font-bold">Le propriétaire se connecte</p>
+                      <p class="text-[10px] text-indigo-500 font-mono">Avec son propre compte AutoCompt</p>
                     </div>
                   </div>
 
@@ -726,8 +802,8 @@ const htmlTemplate = `<!DOCTYPE html>
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold">3</div>
                     <div class="flex-1 p-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/5">
-                      <p class="font-bold text-emerald-500">Ouverture instantanée sans mot de passe</p>
-                      <p class="text-[10px] text-emerald-600/80">Accès sécurisé temporaire (15 min) validé</p>
+                      <p class="font-bold text-emerald-500">Accès permanent à ses relevés</p>
+                      <p class="text-[10px] text-emerald-600/80">Uniquement ses propres données, en tout temps</p>
                     </div>
                   </div>
 
@@ -748,38 +824,38 @@ const htmlTemplate = `<!DOCTYPE html>
                   <div class="flex items-center justify-between pb-3 border-b border-zinc-800/10 dark:border-zinc-800/60">
                     <div class="flex items-center gap-2">
                       <i data-lucide="database" class="w-5 h-5 text-yellow-500"></i>
-                      <span class="font-bold text-sm text-slate-800 dark:text-zinc-200">Google Drive: AutoCompt-Plex-902</span>
+                      <span class="font-bold text-sm text-slate-800 dark:text-zinc-200">Google Drive: AutoCompt</span>
                     </div>
                     <span class="text-[10px] font-black uppercase text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full">Synchronisé</span>
                   </div>
 
-                  <!-- Folder Structure -->
+                  <!-- Folder Structure — un dossier par client, puis par édifice -->
                   <div class="space-y-2 text-xs font-mono">
-                    
+
                     <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
                       <span class="text-yellow-500">📁</span>
-                      <span class="font-semibold text-slate-800 dark:text-zinc-300">2026_Factures_Dépenses/</span>
+                      <span class="font-semibold text-slate-800 dark:text-zinc-300">Client_Tremblay/</span>
                     </div>
-                    
+
                     <div class="pl-6 space-y-2">
-                      <div class="flex items-center justify-between p-2 rounded-lg bg-zinc-500/5 border border-zinc-500/10">
+                      <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
+                        <span class="text-yellow-500">📁</span>
+                        <span class="text-zinc-500">102_Rue_Chambly/</span>
+                      </div>
+                      <div class="flex items-center justify-between p-2 rounded-lg bg-zinc-500/5 border border-zinc-500/10 ml-4">
                         <span class="text-zinc-500">📄 2026-06-02_Rona_345.50_tps_tvq.pdf</span>
                         <span class="text-[9px] text-zinc-500 font-bold">128 KB</span>
-                      </div>
-                      <div class="flex items-center justify-between p-2 rounded-lg bg-zinc-500/5 border border-zinc-500/10">
-                        <span class="text-zinc-500">📄 2026-06-03_St-Hubert_82.40.pdf</span>
-                        <span class="text-[9px] text-zinc-500 font-bold">95 KB</span>
                       </div>
                     </div>
 
                     <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
                       <span class="text-yellow-500">📁</span>
-                      <span class="font-semibold text-slate-800 dark:text-zinc-300">2026_Rapports_Financiers/</span>
+                      <span class="font-semibold text-slate-800 dark:text-zinc-300">Client_Gagnon/</span>
                     </div>
-                    
+
                     <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
                       <span class="text-yellow-500">📁</span>
-                      <span class="font-semibold text-slate-800 dark:text-zinc-300">DocuLegal_Contrats_Promesses/</span>
+                      <span class="font-semibold text-slate-800 dark:text-zinc-300">DocuLegal_Contrats/</span>
                     </div>
 
                   </div>
@@ -1248,7 +1324,7 @@ const htmlTemplate = `<!DOCTYPE html>
         </h2>
         
         <p class="mt-4 text-sm md:text-base max-w-2xl mx-auto text-slate-600 dark:text-zinc-400">
-          Rejoignez des centaines de gestionnaires d'immeubles, courtiers et copropriétaires au Québec qui font confiance à l'IA d'AutoCompt pour leur comptabilité.
+          Rejoignez les premiers utilisateurs bêta du Québec — investisseurs, gestionnaires d'immeubles et syndicats de copropriété qui font confiance à AutoCompt pour leur comptabilité.
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">

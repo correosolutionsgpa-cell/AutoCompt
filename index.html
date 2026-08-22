@@ -2,41 +2,17 @@
 <html lang="fr" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
-  <link rel="apple-touch-icon" href="/favicon-512x512.png" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z'/%3E%3Cpolyline points='9 22 9 12 15 12 15 22'/%3E%3C/svg%3E" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AutoCompt | Logiciel de Comptabilité pour Investisseurs Immobiliers & Plex</title>
-  <!-- Verificación Google Search Console -->
-  <meta name="google-site-verification" content="n8DID5pLEuU2XH_WGfAUhzEEUBUcuyeLZ7_elmocSWg" />
-
-  <!-- Meta Descripción Personalizada (autocompt.ca) -->
-  <meta name="description" content="La solution de comptabilité avec IA dédiée aux investisseurs immobiliers et propriétaires de Plex au Québec. Automatisez vos rapports TPS/TVQ, Relevé 31, baux locatifs et suivi de rentabilité." />
-  <meta name="keywords" content="AutoCompt, comptabilité immobilière, investisseur immobilier, Plex Québec, triplex, gestion locative, TPS TVQ, Relevé 31, rentabilité immobilière">
+  <title>AutoCompt | Logiciel de comptabilité & gestion immobilière Québec</title>
+  <meta name="description" content="AutoCompt: La solution de gestion comptable et immobilière de référence au Québec. Conçue pour les propriétaires de Plex, gestionnaires et syndicats de copropriété.">
+  <meta name="keywords" content="AutoCompt, Gestion immobilière, Quebec, logiciel de comptabilité immobilier Québec, gestion syndicat de copropriété, travailleur autonome, impôts fonciers, Plex, triplex, déclaration fiscale, Loi 25">
   
-  <link rel="canonical" href="https://autocompt.ca/" />
-
   <!-- Open Graph -->
-  <meta property="og:title" content="AutoCompt | Comptabilité Immobilière & Gestion Plex Québec">
-  <meta property="og:description" content="La solution de comptabilité avec IA dédiée aux investisseurs immobiliers et propriétaires de Plex au Québec. Automatisez vos rapports TPS/TVQ, Relevé 31 et baux.">
+  <meta property="og:title" content="AutoCompt | Logiciel de comptabilité immobilier Québec">
+  <meta property="og:description" content="AutoCompt: La solution immobilière de référence au Québec. Le logiciel de comptabilité conçu pour les travailleurs autonomes, propriétaires de plex et syndicats.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="AutoCompt">
-  <meta property="og:url" content="https://autocompt.ca/">
-  <meta property="og:image" content="https://autocompt.ca/logotipofondo%20negro.png">
-
-  <!-- Schema.org Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "AutoCompt",
-    "operatingSystem": "Web",
-    "applicationCategory": "BusinessApplication",
-    "description": "La solution de comptabilité avec IA dédiée aux investisseurs immobiliers et propriétaires de Plex au Québec. Automatisez vos rapports TPS/TVQ, Relevé 31 et baux locatifs.",
-    "url": "https://autocompt.ca/"
-  }
-  </script>
 
   <!-- Google Font: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,21 +38,10 @@
     }
   </script>
 
-  <!-- Lucide Icons Library CDN — version fixée pour éviter qu'une mise à
-       jour amont ne casse silencieusement toutes les icônes du site
-       (trouvé 2026-08-13: Natalia n'a jamais vu le bouton hamburger sur
-       iPhone quand cette librairie n'a pas chargé). -->
-  <script src="https://unpkg.com/lucide@0.462.0"></script>
+  <!-- Lucide Icons Library CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Fallback glyph for the mobile menu button — if the Lucide CDN script
-       fails to load or is slow (seen on iPhone Safari with tracking
-       protection / content blockers), the <i data-lucide> tags stay empty
-       and the button looks blank. This shows a plain "☰" instead until/
-       unless Lucide actually injects its <svg> replacement. */
-    .icon-fallback-glyph { display: none; font-size: 18px; line-height: 1; }
-    .icon-fallback-btn:not(:has(svg)) .icon-fallback-glyph { display: inline-block; }
-
     /* Glassmorphism custom classes */
     .glassmorphism {
       background: rgba(24, 24, 27, 0.6);
@@ -139,12 +104,11 @@
 
     <!-- NAVIGATION BAR -->
     <nav class="sticky top-0 z-50 border-b border-slate-200/80 bg-slate-50/70 backdrop-blur-md transition-colors duration-300 dark:border-zinc-800/80 dark:bg-zinc-950/70">
-      <div class="max-w-7xl mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         
-        <!-- Logo — sized down on mobile (w-9/text-lg was crowding into the
-             "Se connecter" button on real phones, seen 2026-08-13). -->
-        <a href="#" class="group flex items-center space-x-1.5 md:space-x-2 shrink-0">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-7 h-7 md:w-9 md:h-9" fill="none">
+        <!-- Logo -->
+        <a href="#" class="group flex items-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" class="w-9 h-9" fill="none">
             <!-- Background black squircle -->
             <path d="M 64,4 C 108,4 124,20 124,64 C 124,108 108,124 64,124 C 20,124 4,108 4,64 C 4,20 20,4 64,4 Z" fill="#000000" stroke="#059669" stroke-width="2" stroke-opacity="0.2"/>
             <g transform="translate(28, 28) scale(3)" stroke-linejoin="round">
@@ -153,7 +117,7 @@
               <circle cx="6" cy="18" r="1.5" stroke="#10b981" stroke-width="1.5" fill="none"/>
             </g>
           </svg>
-          <span class="font-black italic tracking-tighter uppercase text-sm md:text-lg text-slate-800 dark:text-zinc-100">
+          <span class="font-black italic tracking-tighter uppercase text-lg text-slate-800 dark:text-zinc-100">
             AutoCompt
           </span>
         </a>
@@ -161,9 +125,10 @@
         <!-- Desktop Nav Items -->
         <div class="hidden md:flex items-center gap-8">
           <a href="#features" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.features">Fonctionnalités</a>
+          <a href="#profiles" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500">Profils</a>
           <a href="#deepdive" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.deepDive">Avantages Clés</a>
           <a href="#simulators" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.simulators">Simulateurs Live</a>
-          <!-- <a href="#pricing" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.pricing">Tarifs et Forfaits</a> -->
+          <a href="#pricing" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.pricing">Tarifs et Forfaits</a>
           <a href="#faq" class="font-medium text-sm transition-colors text-slate-600 hover:text-emerald-500 dark:text-zinc-400 dark:hover:text-emerald-500" data-t="nav.faq">FAQ</a>
         </div>
 
@@ -200,9 +165,6 @@
           </button>
 
           <!-- App Actions -->
-          <a href="https://autocompt-app.vercel.app/?login=1" class="font-semibold text-xs px-4 py-2.5 rounded-lg bg-amber-500 hover:bg-amber-600 active:scale-[0.98] transition-all text-white shadow-lg shadow-amber-500/25 flex items-center gap-1.5">
-            Se connecter
-          </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] transition-all text-white font-semibold text-xs px-5 py-2.5 rounded-lg shadow-lg shadow-emerald-500/25 flex items-center gap-1.5">
             <span data-t="pricing.cta">Réserver mon accès gratuit (Limite de 20 places)</span>
             <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
@@ -211,23 +173,15 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="flex md:hidden items-center gap-2">
-          <!-- Always-visible "Se connecter" — previously only reachable by
-               opening the hamburger drawer, so a returning user (who isn't
-               here for the marketing content) had no direct way in. Found
-               2026-08-13: a real user couldn't find this button at all.
-               Enlarged 2026-08-13 using the space freed by dropping the
-               mobile dark-mode toggle (kept on desktop, where there's
-               room) — Fabiola's explicit call: connexion visibility over
-               a cosmetic theme switch on a small screen. -->
-          <a href="https://autocompt-app.vercel.app/?login=1" class="font-bold text-[11px] px-3 h-8 flex items-center rounded-xl bg-amber-500 hover:bg-amber-600 active:scale-[0.98] transition-all text-white shadow-lg shadow-amber-500/25 whitespace-nowrap">
-            Se connecter
-          </a>
+        <div class="flex md:hidden items-center gap-3">
+          <button onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-indigo-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-yellow-400">
+            <i data-lucide="moon" id="mobile-theme-icon-moon" class="w-4 h-4"></i>
+            <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden"></i>
+          </button>
 
-          <button onclick="toggleMobileMenu()" aria-label="Menu" class="icon-fallback-btn w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-300">
+          <button onclick="toggleMobileMenu()" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-300">
             <i data-lucide="menu" id="mobile-menu-hamburger" class="w-5 h-5"></i>
             <i data-lucide="x" id="mobile-menu-close" class="w-5 h-5 hidden"></i>
-            <span class="icon-fallback-glyph" aria-hidden="true">&#9776;</span>
           </button>
         </div>
 
@@ -238,7 +192,7 @@
         <a href="#features" onclick="toggleMobileMenu()" class="font-semibold text-sm py-2 text-slate-700 dark:text-zinc-300" data-t="nav.features">Fonctionnalités</a>
         <a href="#deepdive" onclick="toggleMobileMenu()" class="font-semibold text-sm py-2 text-slate-700 dark:text-zinc-300" data-t="nav.deepDive">Avantages Clés</a>
         <a href="#simulators" onclick="toggleMobileMenu()" class="font-semibold text-sm py-2 text-slate-700 dark:text-zinc-300" data-t="nav.simulators">Simulateurs Live</a>
-        <!-- <a href="#pricing" onclick="toggleMobileMenu()" class="font-semibold text-sm py-2 text-slate-700 dark:text-zinc-300" data-t="nav.pricing">Tarifs et Forfaits</a> -->
+        <a href="#pricing" onclick="toggleMobileMenu()" class="font-semibold text-sm py-2 text-slate-700 dark:text-zinc-300" data-t="nav.pricing">Tarifs et Forfaits</a>
         <a href="#faq" onclick="toggleMobileMenu()" class="font-semibold text-sm py-2 text-slate-700 dark:text-zinc-300" data-t="nav.faq">FAQ</a>
         
         <div class="h-px bg-slate-200 dark:bg-zinc-800/60 my-2"></div>
@@ -252,9 +206,6 @@
         </div>
 
         <div class="flex flex-col gap-3 mt-4">
-          <a href="https://autocompt-app.vercel.app/?login=1" class="w-full text-center bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm py-3 rounded-xl shadow-lg shadow-amber-500/25 block">
-            Se connecter
-          </a>
           <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="w-full text-center bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-sm py-3 rounded-xl shadow-lg shadow-emerald-500/25 block">
             <span data-t="pricing.cta">Réserver mon accès gratuit (Limite de 20 places)</span>
           </a>
@@ -289,7 +240,7 @@
 
           <!-- CTAs -->
           <div class="flex flex-col sm:flex-row gap-4 pt-2">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-bold text-sm px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 group">
+            <a href="#pricing" class="bg-emerald-500 hover:bg-emerald-600 active:scale-[0.98] text-white font-bold text-sm px-8 py-4 rounded-2xl shadow-xl shadow-emerald-500/25 transition-all flex items-center justify-center gap-2 group">
               <span>Profiter de l'offre</span>
               <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
             </a>
@@ -298,22 +249,22 @@
           <!-- Info text -->
           <p class="text-xs font-medium flex items-center gap-2 text-slate-400 dark:text-zinc-500">
             <i data-lucide="check" class="w-4 h-4 text-emerald-500"></i>
-            <span data-t="hero.info">Aucune carte de crédit requise. Démarrez votre essai gratuit de 14 jours.</span>
+            <span data-t="hero.info">Aucune carte de crédit requise. Démarrez votre essai gratuit de 30 jours.</span>
           </p>
 
           <!-- Fast Stats Row -->
           <div class="grid grid-cols-3 gap-4 pt-6 border-t border-zinc-800/10 dark:border-zinc-800/50 max-w-lg">
             <div>
-              <h3 class="text-xl md:text-2xl font-black text-emerald-500">99.4%</h3>
-              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Précision OCR</p>
+              <h3 class="text-xl md:text-2xl font-black text-emerald-500">6</h3>
+              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Profils immobiliers</p>
             </div>
             <div>
               <h3 class="text-xl md:text-2xl font-black text-emerald-500">100%</h3>
               <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Conforme Québec</p>
             </div>
             <div>
-              <h3 class="text-xl md:text-2xl font-black text-emerald-500">&lt; 3s</h3>
-              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Temps de scan</p>
+              <h3 class="text-xl md:text-2xl font-black text-emerald-500">30j</h3>
+              <p class="text-[10px] font-black uppercase tracking-wider text-slate-400 dark:text-zinc-500">Essai gratuit</p>
             </div>
           </div>
 
@@ -323,10 +274,10 @@
         <div class="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
           <div class="absolute inset-[-20px] rounded-full blur-[60px] opacity-30 bg-emerald-300/30 dark:bg-emerald-500/20 pointer-events-none"></div>
 
-          <div class="relative mx-auto max-w-[360px] sm:max-w-[420px] w-full">
+          <div class="relative mx-auto max-w-[285px] w-full">
             
             <!-- Phone Frame -->
-            <div class="relative mx-auto w-full aspect-[9/19] rounded-[48px] border-[12px] border-slate-950 bg-slate-950 shadow-2xl overflow-hidden ring-[12px] ring-emerald-500/20 dark:border-zinc-900 dark:ring-emerald-500/30 dark:shadow-zinc-950/80 transition-all duration-300 hover:scale-[1.02]">
+            <div class="relative mx-auto w-full aspect-[9/19] rounded-[48px] border-[12px] border-slate-950 bg-slate-950 shadow-2xl overflow-hidden ring-1 ring-slate-200 dark:border-zinc-900 dark:ring-zinc-800 dark:shadow-zinc-950/80 transition-all duration-300 hover:scale-[1.02]">
               <div class="absolute inset-0 rounded-[36px] border border-slate-800/20 dark:border-white/5 pointer-events-none z-20"></div>
               
               <!-- Dynamic Island -->
@@ -423,6 +374,81 @@
           </div>
 
         </div>
+      </div>
+    </section>
+
+    <!-- PROFILES SECTION — mêmes 6 profils et mêmes couleurs que dans l'application réelle
+         (cyan=prospecteur, emerald=investisseur, amber=flippeur, indigo=gestionnaire,
+         purple=syndicat, blue=comptable) -->
+    <section id="profiles" class="py-24 max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-[10px] uppercase font-black tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full">
+          6 Profils
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mt-4 text-slate-900 dark:text-white" data-t="profiles.title">
+          Un profil pour chaque réalité immobilière au Québec
+        </h2>
+        <p class="mt-3 text-base text-slate-600 dark:text-zinc-400" data-t="profiles.subtitle">
+          AutoCompt n'est pas un outil générique — c'est six expériences distinctes, chacune conçue pour un métier précis.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <!-- Prospecteur — cyan -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-cyan-100 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 flex items-center justify-center mb-5">
+            <i data-lucide="compass" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.prospecteur.title">Prospecteur immobilier</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.prospecteur.desc">Vous analysez des propriétés avant d'investir ? Suivez votre kilométrage déductible et classez vos dépenses de prospection avant même votre premier achat.</p>
+        </div>
+
+        <!-- Investisseur — emerald -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-5">
+            <i data-lucide="building-2" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.investisseur.title">Investisseur immobilier</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.investisseur.desc">Gérez vos immeubles locatifs, vos rapports fiscaux (T776, TP-128, amortissement DPA) et préparez votre Relevé 31. Location courte durée ? Le module Meublé / Airbnb calcule automatiquement la taxe de séjour et suit votre inscription CITQ.</p>
+        </div>
+
+        <!-- Flippeur — amber -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-5">
+            <i data-lucide="hammer" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.flippeur.title">Flippeur immobilier</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.flippeur.desc">Calculez votre valeur après travaux (ARV), votre budget de rénovation détaillé et la répartition entre partenaires — avant de faire une offre.</p>
+        </div>
+
+        <!-- Gestionnaire — indigo -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-indigo-100 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-5">
+            <i data-lucide="shield-check" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.gestionnaire.title">Gestionnaire immobilier</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.gestionnaire.desc">Un vrai compte en fidéicommis conforme à la Loi sur le courtage immobilier du Québec. Suivez vos clients propriétaires, générez leur Mandat de Gestion, et laissez-les consulter leurs relevés depuis leur propre compte AutoCompt sécurisé.</p>
+        </div>
+
+        <!-- Syndicat — purple -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-purple-100 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-5">
+            <i data-lucide="landmark" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.syndicat.title">Syndicat de copropriété</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.syndicat.desc">Gérez les cotisations de chaque unité, générez vos rapports et convocations assistés par IA, et gardez votre Carnet d'entretien conforme à la Loi 16. Chaque copropriétaire peut avoir son propre accès en lecture seule.</p>
+        </div>
+
+        <!-- Comptable — blue -->
+        <div class="rounded-4xl p-7 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+          <div class="w-11 h-11 rounded-2xl bg-blue-100 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-5">
+            <i data-lucide="file-spreadsheet" class="w-5.5 h-5.5"></i>
+          </div>
+          <h3 class="text-base font-bold mb-2 text-slate-900 dark:text-white" data-t="profiles.comptable.title">Comptable</h3>
+          <p class="text-xs leading-relaxed text-slate-600 dark:text-zinc-400" data-t="profiles.comptable.desc">Un portefeuille multi-clients complet : Journal Général, Grand Livre, Balance, rapport TPS/TVQ, GIFI et export direct vers Sage 50, pour chacun de vos clients immobiliers.</p>
+        </div>
+
       </div>
     </section>
 
@@ -698,17 +724,17 @@
             
             <div class="lg:col-span-6 space-y-6 text-left">
               <span class="text-[10px] uppercase font-black tracking-wider text-indigo-700 dark:text-indigo-400 bg-indigo-100 dark:bg-indigo-950/40 px-3.5 py-1.5 rounded-full">
-                Accès sans mot de passe
+                Accès sécurisé par compte
               </span>
               <h3 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white" data-t="deepdive.magic.title">
-                Simplification fiscale : Gestion du Relevé 31
+                Accès sécurisé par compte pour vos clients propriétaires
               </h3>
               <p class="text-sm md:text-base leading-relaxed text-slate-600 dark:text-zinc-400" data-t="deepdive.magic.desc">
-                Gestion du Relevé 31 : Recevez des alertes pour vos dates limites et facilitez la distribution des documents à vos locataires. (Le document officiel doit être produit directement sur le site de Revenu Québec).
+                Invitez un client propriétaire par courriel : il se connecte avec sa propre adresse et accède en permanence, depuis son propre compte AutoCompt, à ses relevés scellés — jamais un lien temporaire, un vrai accès qu'il contrôle, sans jamais voir vos données de gestion internes.
               </p>
               <div class="flex gap-4">
                 <div class="flex items-center gap-2 text-xs font-semibold text-emerald-500">
-                  <i data-lucide="check-circle-2" class="w-4 h-4"></i> Jetons cryptographiques à usage unique
+                  <i data-lucide="check-circle-2" class="w-4 h-4"></i> Relevés scellés, jamais modifiables
                 </div>
               </div>
             </div>
@@ -716,17 +742,17 @@
             <div class="lg:col-span-6 flex justify-center">
               <div class="w-full max-w-[480px] rounded-4xl border border-slate-200 bg-white p-8 shadow-xl relative overflow-hidden dark:bg-zinc-900/60 dark:border-zinc-800">
                 <div class="absolute top-0 right-0 p-4 opacity-15">
-                  <i data-lucide="share-2" class="w-32 h-32 text-indigo-500"></i>
+                  <i data-lucide="user-check" class="w-32 h-32 text-indigo-500"></i>
                 </div>
-                
+
                 <!-- Flow Chart Mockup -->
                 <div class="space-y-4 relative z-10 text-xs text-left">
-                  
+
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold">1</div>
                     <div class="flex-1 p-3 rounded-2xl border bg-slate-50 border-slate-200 dark:bg-zinc-950/80 dark:border-zinc-850">
-                      <p class="font-bold">CA de la Copropriété / Partenaire Plex</p>
-                      <p class="text-[10px] text-zinc-500">Génère un lien de consultation des dépenses</p>
+                      <p class="font-bold">Gestionnaire immobilier</p>
+                      <p class="text-[10px] text-zinc-500">Invite un client propriétaire par courriel</p>
                     </div>
                   </div>
 
@@ -735,8 +761,8 @@
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold">2</div>
                     <div class="flex-1 p-3 rounded-2xl border bg-slate-50 border-slate-200 dark:bg-zinc-950/80 dark:border-zinc-850">
-                      <p class="font-bold">Courriel sécurisé</p>
-                      <p class="text-[10px] text-indigo-500 font-mono">https://app.autocompt.ca/shared/p/tk_3910x...</p>
+                      <p class="font-bold">Le propriétaire se connecte</p>
+                      <p class="text-[10px] text-indigo-500 font-mono">Avec son propre compte AutoCompt</p>
                     </div>
                   </div>
 
@@ -745,8 +771,8 @@
                   <div class="flex items-center gap-3">
                     <div class="w-8 h-8 rounded-full bg-emerald-500 text-white flex items-center justify-center font-bold">3</div>
                     <div class="flex-1 p-3 rounded-2xl border border-emerald-500/30 bg-emerald-500/5">
-                      <p class="font-bold text-emerald-500">Ouverture instantanée sans mot de passe</p>
-                      <p class="text-[10px] text-emerald-600/80">Accès sécurisé temporaire (15 min) validé</p>
+                      <p class="font-bold text-emerald-500">Accès permanent à ses relevés</p>
+                      <p class="text-[10px] text-emerald-600/80">Uniquement ses propres données, en tout temps</p>
                     </div>
                   </div>
 
@@ -767,38 +793,38 @@
                   <div class="flex items-center justify-between pb-3 border-b border-zinc-800/10 dark:border-zinc-800/60">
                     <div class="flex items-center gap-2">
                       <i data-lucide="database" class="w-5 h-5 text-yellow-500"></i>
-                      <span class="font-bold text-sm text-slate-800 dark:text-zinc-200">Google Drive: AutoCompt-Plex-902</span>
+                      <span class="font-bold text-sm text-slate-800 dark:text-zinc-200">Google Drive: AutoCompt</span>
                     </div>
                     <span class="text-[10px] font-black uppercase text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full">Synchronisé</span>
                   </div>
 
-                  <!-- Folder Structure -->
+                  <!-- Folder Structure — un dossier par client, puis par édifice -->
                   <div class="space-y-2 text-xs font-mono">
-                    
+
                     <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
                       <span class="text-yellow-500">📁</span>
-                      <span class="font-semibold text-slate-800 dark:text-zinc-300">2026_Factures_Dépenses/</span>
+                      <span class="font-semibold text-slate-800 dark:text-zinc-300">Client_Tremblay/</span>
                     </div>
-                    
+
                     <div class="pl-6 space-y-2">
-                      <div class="flex items-center justify-between p-2 rounded-lg bg-zinc-500/5 border border-zinc-500/10">
+                      <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
+                        <span class="text-yellow-500">📁</span>
+                        <span class="text-zinc-500">102_Rue_Chambly/</span>
+                      </div>
+                      <div class="flex items-center justify-between p-2 rounded-lg bg-zinc-500/5 border border-zinc-500/10 ml-4">
                         <span class="text-zinc-500">📄 2026-06-02_Rona_345.50_tps_tvq.pdf</span>
                         <span class="text-[9px] text-zinc-500 font-bold">128 KB</span>
-                      </div>
-                      <div class="flex items-center justify-between p-2 rounded-lg bg-zinc-500/5 border border-zinc-500/10">
-                        <span class="text-zinc-500">📄 2026-06-03_St-Hubert_82.40.pdf</span>
-                        <span class="text-[9px] text-zinc-500 font-bold">95 KB</span>
                       </div>
                     </div>
 
                     <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
                       <span class="text-yellow-500">📁</span>
-                      <span class="font-semibold text-slate-800 dark:text-zinc-300">2026_Rapports_Financiers/</span>
+                      <span class="font-semibold text-slate-800 dark:text-zinc-300">Client_Gagnon/</span>
                     </div>
-                    
+
                     <div class="flex items-center gap-2 p-2 rounded-lg hover:bg-zinc-800/10 dark:hover:bg-zinc-800/40 cursor-pointer">
                       <span class="text-yellow-500">📁</span>
-                      <span class="font-semibold text-slate-800 dark:text-zinc-300">DocuLegal_Contrats_Promesses/</span>
+                      <span class="font-semibold text-slate-800 dark:text-zinc-300">DocuLegal_Contrats/</span>
                     </div>
 
                   </div>
@@ -932,8 +958,8 @@
       </div>
     </section>
 
-    <!-- PRICING SECTION - MASQUÉ -->
-    <section id="pricing" class="hidden" style="display: none !important;">
+    <!-- PRICING SECTION -->
+    <section id="pricing" class="py-24 max-w-7xl mx-auto px-6">
       
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span class="text-[10px] uppercase font-black tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full" data-t="nav.pricing">
@@ -1237,7 +1263,7 @@
   
     <li class="flex items-start gap-2.5 text-xs">
       <i data-lucide="check-circle-2" class="w-4 h-4 shrink-0 mt-0.5 text-emerald-500"></i>
-      <span>Registre légal (DocuLegal) : Archivage automatisé des procès-verbaux, règlements et états financiers dans des dossiers intelligents par année, accessible via Liens Magiques.</span>
+      <span>Registre légal (DocuLegal) : Archivage automatisé des procès-verbaux, règlements et états financiers dans des dossiers intelligents par année, accessible en tout temps depuis votre espace sécurisé.</span>
     </li>
   
     <li class="flex items-start gap-2.5 text-xs">
@@ -1369,11 +1395,11 @@
           <!-- FAQ 3 -->
           <div class="rounded-3xl border border-slate-200 bg-white dark:bg-zinc-900/40 dark:border-zinc-800 transition-colors">
             <button onclick="toggleFaq(3)" class="w-full px-6 py-5 flex items-center justify-between text-left font-bold text-sm text-slate-900 dark:text-white outline-none">
-              <span data-t="faq.q3">Les Liens Magiques sont-ils sécurisés ?</span>
+              <span data-t="faq.q3">Mes copropriétaires ou clients propriétaires peuvent-ils voir les données des autres ?</span>
               <i data-lucide="chevron-down" id="faq-chevron-3" class="w-4 h-4 text-emerald-500 transition-transform duration-300"></i>
             </button>
             <div id="faq-answer-3" class="hidden px-6 pb-5 text-xs leading-relaxed text-slate-600 dark:text-zinc-400 animate-slideDown" data-t="faq.a3">
-              Oui, absolument. Ils remplacent les mots de passe vulnérables par des jetons cryptographiques à usage unique valides pendant 15 minutes. C'est la solution idéale pour assurer une gestion simplifiée pour syndicat de copropriété en garantissant la confidentialité des données.
+              Non, jamais. Chaque copropriétaire invité n'a accès qu'à sa propre unité et, en lecture seule, aux informations globales du syndicat (transparence financière, communications). Chaque client propriétaire d'un gestionnaire ne voit que ses propres relevés scellés, jamais les données des autres clients ni celles de gestion interne.
             </div>
           </div>
 
@@ -1407,7 +1433,7 @@
         </h2>
         
         <p class="mt-4 text-sm md:text-base max-w-2xl mx-auto text-slate-600 dark:text-zinc-400">
-          Rejoignez des centaines de gestionnaires d'immeubles, courtiers et copropriétaires au Québec qui font confiance à l'IA d'AutoCompt pour leur comptabilité.
+          Rejoignez les premiers utilisateurs bêta du Québec — investisseurs, gestionnaires d'immeubles et syndicats de copropriété qui font confiance à AutoCompt pour leur comptabilité.
         </p>
 
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mt-8">
@@ -1449,26 +1475,6 @@
             <i data-lucide="shield-check" class="w-3.5 h-3.5 shrink-0 text-emerald-500"></i>
             <span>Données sécurisées • Conforme à la Loi 25 sur la protection des renseignements personnels au Québec.</span>
           </div>
-
-          <!-- Social Networks -->
-          <div class="pt-3 flex items-center gap-3">
-            <span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-zinc-500">Suivez-nous :</span>
-            
-            <!-- Facebook - Actif -->
-            <a href="https://www.facebook.com/profile.php?id=61590298907041" target="_blank" rel="noopener noreferrer" title="AutoCompt sur Facebook" aria-label="Facebook AutoCompt" class="w-8 h-8 rounded-full bg-blue-600/10 hover:bg-blue-600/20 border border-blue-500/30 flex items-center justify-center text-blue-500 hover:text-blue-400 transition-all transform hover:scale-110">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            </a>
-
-            <!-- Instagram - Préparé -->
-            <a href="https://instagram.com/autocompt" target="_blank" rel="noopener noreferrer" title="AutoCompt sur Instagram (Bientôt disponible)" aria-label="Instagram AutoCompt" class="w-8 h-8 rounded-full bg-pink-500/10 hover:bg-pink-500/20 border border-pink-500/30 flex items-center justify-center text-pink-400 hover:text-pink-300 transition-all transform hover:scale-110">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-
-            <!-- LinkedIn - Préparé -->
-            <a href="https://linkedin.com/company/autocompt" target="_blank" rel="noopener noreferrer" title="AutoCompt sur LinkedIn (Bientôt disponible)" aria-label="LinkedIn AutoCompt" class="w-8 h-8 rounded-full bg-sky-600/10 hover:bg-sky-600/20 border border-sky-500/30 flex items-center justify-center text-sky-400 hover:text-sky-300 transition-all transform hover:scale-110">
-              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-          </div>
         </div>
 
         <div class="md:col-span-2 space-y-3 text-left">
@@ -1477,7 +1483,7 @@
             <a href="#features" class="hover:text-emerald-500 transition-colors" data-t="nav.features">Fonctionnalités</a>
             <a href="#deepdive" class="hover:text-emerald-500 transition-colors" data-t="nav.deepDive">Avantages Clés</a>
             <a href="#simulators" class="hover:text-emerald-500 transition-colors">Démo Live</a>
-            <!-- <a href="#pricing" class="hover:text-emerald-500 transition-colors" data-t="nav.pricing">Tarifs et Forfaits</a> -->
+            <a href="#pricing" class="hover:text-emerald-500 transition-colors" data-t="nav.pricing">Tarifs et Forfaits</a>
           </div>
         </div>
 
@@ -1514,30 +1520,8 @@
       </div>
     </footer>
 
-    <!-- BACK TO TOP FLOATING BUTTON -->
-    <button id="backToTopBtn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="Volver arriba" title="Volver arriba" class="fixed bottom-20 right-4 md:bottom-24 md:right-8 z-50 p-3 rounded-full bg-emerald-600 hover:bg-emerald-500 text-white shadow-xl shadow-emerald-900/30 border border-emerald-400/30 transition-all duration-300 transform hover:scale-110 active:scale-95 hidden items-center justify-center cursor-pointer">
-      <i data-lucide="arrow-up" class="w-5 h-5"></i>
-    </button>
-
-    <script>
-      window.addEventListener('scroll', function() {
-        var btn = document.getElementById('backToTopBtn');
-        if (btn) {
-          if (window.scrollY > 200) {
-            btn.classList.remove('hidden');
-            btn.classList.add('flex');
-          } else {
-            btn.classList.add('hidden');
-            btn.classList.remove('flex');
-          }
-        }
-      });
-    </script>
-
-    <!-- STICKY CTA FLOATING BUTTON — masqué quand le menu mobile est ouvert
-         (toggleMobileMenu() bascule aussi son id), sinon il se superposait
-         au bouton identique déjà présent dans le tiroir mobile. -->
-    <a id="sticky-cta-floating" href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 bg-[#059669] hover:bg-[#047857] active:scale-95 transition-all text-white font-bold text-xs md:text-sm px-5 py-3 md:px-6 md:py-3.5 rounded-full shadow-lg shadow-emerald-500/30 ring-2 ring-emerald-500/20 flex items-center gap-2 group">
+    <!-- STICKY CTA FLOATING BUTTON -->
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScnBGzfTKw2qS033a7Z08OBqb7j1iSJPa-bR0nULC7uaQ7sBA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="fixed bottom-4 right-4 md:bottom-8 md:right-8 z-50 bg-[#059669] hover:bg-[#047857] active:scale-95 transition-all text-white font-bold text-xs md:text-sm px-5 py-3 md:px-6 md:py-3.5 rounded-full shadow-lg shadow-emerald-500/30 ring-2 ring-emerald-500/20 flex items-center gap-2 group">
       <span data-t="pricing.cta">Réserver mon accès gratuit (Limite de 20 places)</span>
       <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
     </a>
@@ -1581,7 +1565,35 @@
       "subtitle": "Tenue de livres automatisée : Économisez jusqu'à 80% sur vos frais comptables et libérez des dizaines d'heures par mois. AutoCompt est la solution immobilière de référence au Québec, conçue pour les travailleurs autonomes, les propriétaires de plex (en nom personnel ou entreprise) et les syndicats de copropriété de toutes tailles.",
       "ctaPrimary": "Optimiser ma comptabilité gratuitement",
       "ctaSecondary": "Tester le simulateur live",
-      "info": "Aucune carte de crédit requise. Démarrez votre essai gratuit de 14 jours."
+      "info": "Aucune carte de crédit requise. Démarrez votre essai gratuit de 30 jours."
+    },
+    "profiles": {
+      "title": "Un profil pour chaque réalité immobilière au Québec",
+      "subtitle": "AutoCompt n'est pas un outil générique — c'est six expériences distinctes, chacune conçue pour un métier précis.",
+      "prospecteur": {
+        "title": "Prospecteur immobilier",
+        "desc": "Vous analysez des propriétés avant d'investir ? Suivez votre kilométrage déductible et classez vos dépenses de prospection avant même votre premier achat."
+      },
+      "investisseur": {
+        "title": "Investisseur immobilier",
+        "desc": "Gérez vos immeubles locatifs, vos rapports fiscaux (T776, TP-128, amortissement DPA) et préparez votre Relevé 31. Location courte durée ? Le module Meublé / Airbnb calcule automatiquement la taxe de séjour et suit votre inscription CITQ."
+      },
+      "flippeur": {
+        "title": "Flippeur immobilier",
+        "desc": "Calculez votre valeur après travaux (ARV), votre budget de rénovation détaillé et la répartition entre partenaires — avant de faire une offre."
+      },
+      "gestionnaire": {
+        "title": "Gestionnaire immobilier",
+        "desc": "Un vrai compte en fidéicommis conforme à la Loi sur le courtage immobilier du Québec. Suivez vos clients propriétaires, générez leur Mandat de Gestion, et laissez-les consulter leurs relevés depuis leur propre compte AutoCompt sécurisé."
+      },
+      "syndicat": {
+        "title": "Syndicat de copropriété",
+        "desc": "Gérez les cotisations de chaque unité, générez vos rapports et convocations assistés par IA, et gardez votre Carnet d'entretien conforme à la Loi 16. Chaque copropriétaire peut avoir son propre accès en lecture seule."
+      },
+      "comptable": {
+        "title": "Comptable",
+        "desc": "Un portefeuille multi-clients complet : Journal Général, Grand Livre, Balance, rapport TPS/TVQ, GIFI et export direct vers Sage 50, pour chacun de vos clients immobiliers."
+      }
     },
     "features": {
       "title": "Comptabilité immobilière pour tout le Québec",
@@ -1683,7 +1695,7 @@
           "features": [
             "Tenue de livres automatisée : Suivi rigoureux des dépenses et revenus du syndicat.",
             "Suivi des Fonds Obligatoires : Visualisation claire et séparée du Fonds de prévoyance et Fonds d'autoassurance sur le Dashboard.",
-            "Registre légal (DocuLegal) : Archivage automatisé des procès-verbaux, règlements et états financiers dans des dossiers intelligents par année, accessible via Liens Magiques.",
+            "Registre légal (DocuLegal) : Archivage automatisé des procès-verbaux, règlements et états financiers dans des dossiers intelligents par année, accessible en tout temps depuis votre espace sécurisé.",
             "Gouvernance et suivi de CA : Outils collaboratifs de gestion pour le conseil d'administration (1 administrateur complet, accès limité copropriétaires)."
           ]
         },
@@ -1709,8 +1721,8 @@
       "title": "Une solution immobilière provinciale de nouvelle generación",
       "subtitle": "Découvrez comment notre technologie optimise la comptabilité des investisseurs, travailleurs autonomes et syndicats au Québec.",
       "magic": {
-        "title": "Simplification fiscale : Gestion du Relevé 31",
-        "desc": "Gestion du Relevé 31 : Recevez des alertes pour vos dates limites et facilitez la distribution des documents à vos locataires. (Le document officiel doit être produit directement sur le site de Revenu Québec)."
+        "title": "Accès sécurisé par compte pour vos clients propriétaires",
+        "desc": "Invitez un client propriétaire par courriel : il se connecte avec sa propre adresse et accède en permanence, depuis son propre compte AutoCompt, à ses relevés scellés — jamais un lien temporaire, un vrai accès qu'il contrôle, sans jamais voir vos données de gestion internes."
       },
       "drive": {
         "title": "Intégration Cloud flexible",
@@ -1767,8 +1779,8 @@
       "a1": "Notre IA de lecture optique (OCR) est spécialement configurée pour le marché québécois. Elle détecte automatiquement les numéros d'enregistrement de TPS et TVQ, calcule les taxes de vente exactes et classe vos reçus sans aucune saisie manuelle.",
       "q2": "Puis-je l'utiliser AutoCompt si je travaille déjà avec un comptable ?",
       "a2": "Absolument. AutoCompt agit comme une application comptable pour travailleurs autonomes et gestionnaires qui simplifie la collecte de données. Vous pouvez exporter vos rapports en format Excel/CSV ou donner un accès direct à votre comptable pour faciliter les déclarations fiscales.",
-      "q3": "Les Liens Magiques sont-ils sécurisés ?",
-      "a3": "Oui, absolument. Ils remplacent les mots de passe vulnérables par des jetons cryptographiques à usage unique valides pendant 15 minutes. C'est la solution idéale pour assurer une gestion simplifiée pour syndicat de copropriété en garantissant la confidentialité des données.",
+      "q3": "Mes copropriétaires ou clients propriétaires peuvent-ils voir les données des autres ?",
+      "a3": "Non, jamais. Chaque copropriétaire invité n'a accès qu'à sa propre unité et, en lecture seule, aux informations globales du syndicat (transparence financière, communications). Chaque client propriétaire d'un gestionnaire ne voit que ses propres relevés scellés, jamais les données des autres clients ni celles de gestion interne.",
       "q4": "Comment AutoCompt m'aide-t-il avec le Fonds de prévoyance ?",
       "a4": "AutoCompt intègre un module de planification financière conforme aux exigences québécoises (Loi 16). Notre solution immobilière provinciale vous aide à planifier les cotisations du fonds de prévoyance en fonction de l'évaluation physique de votre immeuble."
     },
@@ -1808,7 +1820,35 @@
       "subtitle": "Automated bookkeeping: Save up to 80% on your accounting fees and free up dozens of hours per month. AutoCompt is the leading real estate solution in Quebec, designed for self-employed workers, plex owners (personally or corporately), and co-ownership syndicates of all sizes.",
       "ctaPrimary": "Optimize my accounting for free",
       "ctaSecondary": "Test live simulator",
-      "info": "No credit card required. Start your 14-day free trial."
+      "info": "No credit card required. Start your 30-day free trial."
+    },
+    "profiles": {
+      "title": "A profile for every real estate reality in Quebec",
+      "subtitle": "AutoCompt isn't a generic tool — it's six distinct experiences, each designed for a specific profession.",
+      "prospecteur": {
+        "title": "Real Estate Prospector",
+        "desc": "Analyzing properties before investing? Track your deductible mileage and classify your prospecting expenses before your very first purchase."
+      },
+      "investisseur": {
+        "title": "Real Estate Investor",
+        "desc": "Manage your rental properties, your tax reports (T776, TP-128, CCA depreciation) and prepare your Relevé 31. Short-term rentals? The Furnished / Airbnb module automatically calculates the lodging tax and tracks your CITQ registration."
+      },
+      "flippeur": {
+        "title": "House Flipper",
+        "desc": "Calculate your after-repair value (ARV), your detailed renovation budget, and the split between partners — before making an offer."
+      },
+      "gestionnaire": {
+        "title": "Property Manager",
+        "desc": "A real trust account compliant with Quebec's Real Estate Brokerage Act. Track your property-owner clients, generate their Management Mandate, and let them consult their statements from their own secure AutoCompt account."
+      },
+      "syndicat": {
+        "title": "Condo Syndicate",
+        "desc": "Manage each unit's fees, generate AI-assisted reports and meeting notices, and keep your maintenance logbook compliant with Bill 16. Each co-owner can have their own read-only access."
+      },
+      "comptable": {
+        "title": "Accountant",
+        "desc": "A complete multi-client portfolio: General Journal, General Ledger, Trial Balance, GST/QST report, GIFI, and direct export to Sage 50, for each of your real estate clients."
+      }
     },
     "features": {
       "title": "Real Estate Bookkeeping for all of Quebec",
@@ -1910,7 +1950,7 @@
           "features": [
             "Automated bookkeeping: Rigorous tracking of the syndicate's expenses and income.",
             "Tracking of Mandatory Funds: Clear and separate visualization of the Contingency Fund and Self-Insurance Fund on the Dashboard.",
-            "Legal Register (DocuLegal): Automated archiving of minutes, bylaws, and financial statements in smart folders by year, accessible via Magic Links.",
+            "Legal Register (DocuLegal): Automated archiving of minutes, bylaws, and financial statements in smart folders by year, accessible anytime from your secure space.",
             "Board Governance & Tracking: Collaborative tools for the Board of Directors (1 full administrator, limited co-owner access)."
           ]
         },
@@ -1936,8 +1976,8 @@
       "title": "A next-generation provincial real estate solution",
       "subtitle": "Discover how our technology optimizes bookkeeping for investors, self-employed workers, and syndicates in Quebec.",
       "magic": {
-        "title": "Tax simplification: Relevé 31 Management",
-        "desc": "Relevé 31 Management: Receive alerts for your deadlines and facilitate document distribution to your tenants. (The official document must be produced directly on the Revenu Québec website)."
+        "title": "Secure account-based access for your property-owner clients",
+        "desc": "Invite a property-owner client by email: they log in with their own address and get permanent access, from their own AutoCompt account, to their sealed statements — never a temporary link, real access they control, without ever seeing your internal management data."
       },
       "drive": {
         "title": "Flexible Cloud Integration",
@@ -1994,8 +2034,8 @@
       "a1": "Our OCR AI is configured specifically for the Quebec market. It automatically detects GST and QST registration numbers, calculates the exact sales taxes, and logs your receipts without any manual data entry.",
       "q2": "Can I use AutoCompt if I already work with an accountant?",
       "a2": "Absolutely. AutoCompt acts as a collection app for self-employed workers and managers to simplify data gathering. You can export reports in Excel/CSV formats or give direct access to your accountant to facilitate tax filing.",
-      "q3": "Are Magic Links secure?",
-      "a3": "Yes, absolutely. They replace vulnerable passwords with secure, single-use cryptographic tokens valid for 15 minutes. It is the ideal solution to ensure simplified management for co-ownership syndicates while guaranteeing data confidentiality.",
+      "q3": "Can my co-owners or property-owner clients see each other's data?",
+      "a3": "No, never. Each invited co-owner only has access to their own unit and, read-only, to the syndicate's overall information (financial transparency, communications). Each of a manager's property-owner clients only sees their own sealed statements, never other clients' data or internal management data.",
       "q4": "How does AutoCompt help me with the contingency fund?",
       "a4": "AutoCompt integrates a financial planning module compliant with Quebec requirements (Bill 16). Our provincial real estate solution helps you plan contingency fund contributions based on the physical evaluation of your building."
     },
@@ -2035,7 +2075,35 @@
       "subtitle": "Contabilidad automatizada: Ahorre hasta un 80% en sus gastos contables y libere decenas de horas al mes. AutoCompt es la solución inmobiliaria de referencia en Quebec, diseñada para trabajadores autónomos, propietarios de plex (a título personal o por empresa) y sindicatos de copropiedad de todos los tamaños.",
       "ctaPrimary": "Optimizar mi contabilidad gratis",
       "ctaSecondary": "Probar el simulador en vivo",
-      "info": "No se requiere tarjeta de crédito. Comience su prueba gratuita de 14 días."
+      "info": "No se requiere tarjeta de crédito. Comience su prueba gratuita de 30 días."
+    },
+    "profiles": {
+      "title": "Un perfil para cada realidad inmobiliaria en Quebec",
+      "subtitle": "AutoCompt no es una herramienta genérica — son seis experiencias distintas, cada una diseñada para un oficio específico.",
+      "prospecteur": {
+        "title": "Prospector inmobiliario",
+        "desc": "¿Analiza propiedades antes de invertir? Registre su kilometraje deducible y clasifique sus gastos de prospección antes incluso de su primera compra."
+      },
+      "investisseur": {
+        "title": "Inversionista inmobiliario",
+        "desc": "Gestione sus inmuebles de alquiler, sus informes fiscales (T776, TP-128, amortización DPA) y prepare su Relevé 31. ¿Alquiler de corta duración? El módulo Amueblado / Airbnb calcula automáticamente el impuesto de estadía y da seguimiento a su inscripción CITQ."
+      },
+      "flippeur": {
+        "title": "Flippeur inmobiliario",
+        "desc": "Calcule su valor después de reformas (ARV), su presupuesto de renovación detallado y el reparto entre socios — antes de hacer una oferta."
+      },
+      "gestionnaire": {
+        "title": "Gestor inmobiliario",
+        "desc": "Una cuenta en fideicomiso real, conforme a la Ley de corretaje inmobiliario de Quebec. Dé seguimiento a sus clientes propietarios, genere su Mandato de Gestión, y déjelos consultar sus estados de cuenta desde su propia cuenta segura de AutoCompt."
+      },
+      "syndicat": {
+        "title": "Sindicato de copropiedad",
+        "desc": "Gestione las cuotas de cada unidad, genere sus informes y convocatorias asistidos por IA, y mantenga su bitácora de mantenimiento conforme a la Ley 16. Cada copropietario puede tener su propio acceso de solo lectura."
+      },
+      "comptable": {
+        "title": "Contador",
+        "desc": "Un portafolio multi-cliente completo: Diario General, Libro Mayor, Balance, informe de TPS/TVQ, GIFI y exportación directa a Sage 50, para cada uno de sus clientes inmobiliarios."
+      }
     },
     "features": {
       "title": "Contabilidad inmobiliaria para todo Quebec",
@@ -2137,7 +2205,7 @@
           "features": [
             "Contabilidad automatizada: Seguimiento riguroso de los gastos e ingresos del sindicato.",
             "Seguimiento de Fondos Obligatorios: Visualización clara y separada del Fondo de previsión y Fondo de autoseguro en el Dashboard.",
-            "Registro legal (DocuLegal): Archivo automatizado de actas, reglamentos y estados financieros en carpetas inteligentes por año, accesible mediante Enlaces Mágicos.",
+            "Registro legal (DocuLegal): Archivo automatizado de actas, reglamentos y estados financieros en carpetas inteligentes por año, accesible en todo momento desde su espacio seguro.",
             "Gobernanza y seguimiento de la junta: Herramientas colaborativas de gestión para el consejo de administración (1 administrador completo, acceso limitado para copropietarios)."
           ]
         },
@@ -2163,8 +2231,8 @@
       "title": "Una solución inmobiliaria provincial de nueva generación",
       "subtitle": "Descubra cómo nuestra tecnología optimiza la contabilidad de inversores, trabajadores autónomos y sindicatos en Quebec.",
       "magic": {
-        "title": "Simplificación fiscal: Gestión del Relevé 31",
-        "desc": "Gestión del Relevé 31: Reciba alertas para sus fechas límite y facilite la distribución de documentos a sus inquilinos. (El documento oficial debe producirse directamente en el sitio web de Revenu Québec)."
+        "title": "Acceso seguro por cuenta para sus clientes propietarios",
+        "desc": "Invite a un cliente propietario por correo: se conecta con su propia dirección y accede de forma permanente, desde su propia cuenta de AutoCompt, a sus estados de cuenta sellados — nunca un enlace temporal, un acceso real que él controla, sin ver jamás sus datos internos de gestión."
       },
       "drive": {
         "title": "Integración Cloud flexible",
@@ -2221,8 +2289,8 @@
       "a1": "Nuestra IA de reconocimiento óptico (OCR) está configurada específicamente para el mercado de Quebec. Detecta automáticamente los números de registro de TPS y TVQ, calcula los impuestos de venta exactos y clasifica sus recibos sin ingreso manual.",
       "q2": "¿Puedo usar AutoCompt si ya trabajo con un contador?",
       "a2": "Absolutamente. AutoCompt funciona como una herramienta de recopilación para trabajadores autónomos y gestores que simplifica la recopilación de datos. Puede exportar informes en formatos Excel/CSV o dar acceso directo a su contador para facilitar la declaración de impuestos.",
-      "q3": "¿Son seguros los Enlaces Mágicos?",
-      "a3": "Sí, por supuesto. Reemplazan contraseñas vulnerables con tokens criptográficos de un solo uso válidos por 15 minutos. Es la solución ideal para asegurar una gestión simplificada de copropiedades garantizando la confidencialidad de los datos.",
+      "q3": "¿Mis copropietarios o clientes propietarios pueden ver los datos de los demás?",
+      "a3": "No, nunca. Cada copropietario invitado solo tiene acceso a su propia unidad y, en modo lectura, a la información global del sindicato (transparencia financiera, comunicaciones). Cada cliente propietario de un gestor solo ve sus propios estados de cuenta sellados, nunca los datos de otros clientes ni los de gestión interna.",
       "q4": "¿Cómo me ayuda AutoCompt con el fondo de previsión?",
       "a4": "AutoCompt integra un módulo de planificación financiera que cumple con las regulaciones de Quebec (Loi 16). Nuestra solución inmobiliaria provincial le ayuda a planificar las contribuciones al fondo de previsión en función de la evaluación física de su edificio."
     },
@@ -2416,19 +2484,16 @@
       const drawer = document.getElementById('mobile-drawer');
       const burger = document.getElementById('mobile-menu-hamburger');
       const close = document.getElementById('mobile-menu-close');
-      const stickyCta = document.getElementById('sticky-cta-floating');
-
+      
       const isOpen = !drawer.classList.contains('hidden');
       if (isOpen) {
         drawer.classList.add('hidden');
         close.classList.add('hidden');
         burger.classList.remove('hidden');
-        if (stickyCta) stickyCta.classList.remove('hidden');
       } else {
         drawer.classList.remove('hidden');
         burger.classList.add('hidden');
         close.classList.remove('hidden');
-        if (stickyCta) stickyCta.classList.add('hidden');
       }
     }
 
@@ -2639,50 +2704,35 @@
       const isAnnual = billingCycle === 'annual';
 
       if (pricingAudience === 'owners') {
+        // Owner 1
         const o1 = tDict.pricing.proprietaires[0];
-        const po1 = document.getElementById('price-owner-1');
-        if (po1) po1.innerText = '$' + (isAnnual ? o1.priceAnnual : o1.priceMonthly);
-        const ybo1 = document.getElementById('yearly-billing-owner-1');
-        if (ybo1) {
-          ybo1.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o1.priceYearly}$ / año` : `Billed $${o1.priceYearly} / yr`) : '';
-          ybo1.classList.toggle('hidden', !isAnnual);
-        }
+        document.getElementById('price-owner-1').innerText = '$' + (isAnnual ? o1.priceAnnual : o1.priceMonthly);
+        document.getElementById('yearly-billing-owner-1').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o1.priceYearly}$ / año` : `Billed $${o1.priceYearly} / yr`) : '';
+        document.getElementById('yearly-billing-owner-1').classList.toggle('hidden', !isAnnual);
 
+        // Owner 2
         const o2 = tDict.pricing.proprietaires[1];
-        const po2 = document.getElementById('price-owner-2');
-        if (po2) po2.innerText = '$' + (isAnnual ? o2.priceAnnual : o2.priceMonthly);
-        const ybo2 = document.getElementById('yearly-billing-owner-2');
-        if (ybo2) {
-          ybo2.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o2.priceYearly}$ / año` : `Billed $${o2.priceYearly} / yr`) : '';
-          ybo2.classList.toggle('hidden', !isAnnual);
-        }
+        document.getElementById('price-owner-2').innerText = '$' + (isAnnual ? o2.priceAnnual : o2.priceMonthly);
+        document.getElementById('yearly-billing-owner-2').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o2.priceYearly}$ / año` : `Billed $${o2.priceYearly} / yr`) : '';
+        document.getElementById('yearly-billing-owner-2').classList.toggle('hidden', !isAnnual);
 
-        const o3 = tDict.pricing.proprietaires[3];
-        const po3 = document.getElementById('price-owner-3');
-        if (po3) po3.innerText = '$' + (isAnnual ? o3.priceAnnual : o3.priceMonthly);
-        const ybo3 = document.getElementById('yearly-billing-owner-3');
-        if (ybo3) {
-          ybo3.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o3.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o3.priceYearly}$ / año` : `Billed $${o3.priceYearly} / yr`) : '';
-          ybo3.classList.toggle('hidden', !isAnnual);
-        }
+        // Owner 3
+        const o3 = tDict.pricing.proprietaires[2];
+        document.getElementById('price-owner-3').innerText = '$' + (isAnnual ? o3.priceAnnual : o3.priceMonthly);
+        document.getElementById('yearly-billing-owner-3').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${o3.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${o3.priceYearly}$ / año` : `Billed $${o3.priceYearly} / yr`) : '';
+        document.getElementById('yearly-billing-owner-3').classList.toggle('hidden', !isAnnual);
       } else {
+        // Syndicate 1
         const s1 = tDict.pricing.syndicats[0];
-        const ps1 = document.getElementById('price-syndicate-1');
-        if (ps1) ps1.innerText = '$' + (isAnnual ? s1.priceAnnual : s1.priceMonthly);
-        const ybs1 = document.getElementById('yearly-billing-syndicate-1');
-        if (ybs1) {
-          ybs1.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s1.priceYearly}$ / año` : `Billed $${s1.priceYearly} / yr`) : '';
-          ybs1.classList.toggle('hidden', !isAnnual);
-        }
+        document.getElementById('price-syndicate-1').innerText = '$' + (isAnnual ? s1.priceAnnual : s1.priceMonthly);
+        document.getElementById('yearly-billing-syndicate-1').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s1.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s1.priceYearly}$ / año` : `Billed $${s1.priceYearly} / yr`) : '';
+        document.getElementById('yearly-billing-syndicate-1').classList.toggle('hidden', !isAnnual);
 
+        // Syndicate 2
         const s2 = tDict.pricing.syndicats[1];
-        const ps2 = document.getElementById('price-syndicate-2');
-        if (ps2) ps2.innerText = '$' + (isAnnual ? s2.priceAnnual : s2.priceMonthly);
-        const ybs2 = document.getElementById('yearly-billing-syndicate-2');
-        if (ybs2) {
-          ybs2.innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s2.priceYearly}$ / año` : `Billed $${s2.priceYearly} / yr`) : '';
-          ybs2.classList.toggle('hidden', !isAnnual);
-        }
+        document.getElementById('price-syndicate-2').innerText = '$' + (isAnnual ? s2.priceAnnual : s2.priceMonthly);
+        document.getElementById('yearly-billing-syndicate-2').innerText = isAnnual ? (currentLang === 'FR' ? `Facturé ${s2.priceYearly}$ / an` : currentLang === 'ES' ? `Facturado ${s2.priceYearly}$ / año` : `Billed $${s2.priceYearly} / yr`) : '';
+        document.getElementById('yearly-billing-syndicate-2').classList.toggle('hidden', !isAnnual);
       }
     }
   </script>

@@ -14,7 +14,35 @@ const FR = {
     subtitle: "Tenue de livres automatisée : Économisez jusqu'à 80% sur vos frais comptables et libérez des dizaines d'heures par mois. AutoCompt est la solution immobilière de référence au Québec, conçue pour les travailleurs autonomes, les propriétaires de plex (en nom personnel ou entreprise) et les syndicats de copropriété de toutes tailles.",
     ctaPrimary: "Optimiser ma comptabilité gratuitement",
     ctaSecondary: "Tester le simulateur live",
-    info: "Aucune carte de crédit requise. Démarrez votre essai gratuit de 14 jours.",
+    info: "Aucune carte de crédit requise. Démarrez votre essai gratuit de 30 jours.",
+  },
+  profiles: {
+    title: "Un profil pour chaque réalité immobilière au Québec",
+    subtitle: "AutoCompt n'est pas un outil générique — c'est six expériences distinctes, chacune conçue pour un métier précis.",
+    prospecteur: {
+      title: "Prospecteur immobilier",
+      desc: "Vous analysez des propriétés avant d'investir ? Suivez votre kilométrage déductible et classez vos dépenses de prospection avant même votre premier achat.",
+    },
+    investisseur: {
+      title: "Investisseur immobilier",
+      desc: "Gérez vos immeubles locatifs, vos rapports fiscaux (T776, TP-128, amortissement DPA) et préparez votre Relevé 31. Location courte durée ? Le module Meublé / Airbnb calcule automatiquement la taxe de séjour et suit votre inscription CITQ.",
+    },
+    flippeur: {
+      title: "Flippeur immobilier",
+      desc: "Calculez votre valeur après travaux (ARV), votre budget de rénovation détaillé et la répartition entre partenaires — avant de faire une offre.",
+    },
+    gestionnaire: {
+      title: "Gestionnaire immobilier",
+      desc: "Un vrai compte en fidéicommis conforme à la Loi sur le courtage immobilier du Québec. Suivez vos clients propriétaires, générez leur Mandat de Gestion, et laissez-les consulter leurs relevés depuis leur propre compte AutoCompt sécurisé.",
+    },
+    syndicat: {
+      title: "Syndicat de copropriété",
+      desc: "Gérez les cotisations de chaque unité, générez vos rapports et convocations assistés par IA, et gardez votre Carnet d'entretien conforme à la Loi 16. Chaque copropriétaire peut avoir son propre accès en lecture seule.",
+    },
+    comptable: {
+      title: "Comptable",
+      desc: "Un portefeuille multi-clients complet : Journal Général, Grand Livre, Balance, rapport TPS/TVQ, GIFI et export direct vers Sage 50, pour chacun de vos clients immobiliers.",
+    },
   },
   features: {
     title: "Comptabilité immobilière pour tout le Québec",
@@ -116,7 +144,7 @@ const FR = {
         features: [
           "Tenue de livres automatisée : Suivi rigoureux des dépenses et revenus du syndicat.",
           "Suivi des Fonds Obligatoires : Visualisation claire et séparée du Fonds de prévoyance et Fonds d'autoassurance sur le Dashboard.",
-          "Registre légal (DocuLegal) : Archivage automatisé des procès-verbaux, règlements et états financiers dans des dossiers intelligents par année, accessible via Liens Magiques.",
+          "Registre légal (DocuLegal) : Archivage automatisé des procès-verbaux, règlements et états financiers dans des dossiers intelligents par année, accessible en tout temps depuis votre espace sécurisé.",
           "Gouvernance et suivi de CA : Outils collaboratifs de gestion pour le conseil d'administration (1 administrateur complet, accès limité copropriétaires)."
         ]
       },
@@ -142,8 +170,8 @@ const FR = {
     title: "Une solution immobilière provinciale de nouvelle generación",
     subtitle: "Découvrez comment notre technologie optimise la comptabilité des investisseurs, travailleurs autonomes et syndicats au Québec.",
     magic: {
-      title: "Simplification fiscale : Gestion du Relevé 31",
-      desc: "Gestion du Relevé 31 : Recevez des alertes pour vos dates limites et facilitez la distribution des documents à vos locataires. (Le document officiel doit être produit directement sur le site de Revenu Québec).",
+      title: "Accès sécurisé par compte pour vos clients propriétaires",
+      desc: "Invitez un client propriétaire par courriel : il se connecte avec sa propre adresse et accède en permanence, depuis son propre compte AutoCompt, à ses relevés scellés — jamais un lien temporaire, un vrai accès qu'il contrôle, sans jamais voir vos données de gestion internes.",
     },
     drive: {
       title: "Intégration Cloud flexible",
@@ -200,8 +228,8 @@ const FR = {
     a1: "Notre IA de lecture optique (OCR) est spécialement configurée pour le marché québécois. Elle détecte automatiquement les numéros d'enregistrement de TPS et TVQ, calcule les taxes de vente exactes et classe vos reçus sans aucune saisie manuelle.",
     q2: "Puis-je l'utiliser AutoCompt si je travaille déjà avec un comptable ?",
     a2: "Absolument. AutoCompt agit comme une application comptable pour travailleurs autonomes et gestionnaires qui simplifie la collecte de données. Vous pouvez exporter vos rapports en format Excel/CSV ou donner un accès direct à votre comptable pour faciliter les déclarations fiscales.",
-    q3: "Les Liens Magiques sont-ils sécurisés ?",
-    a3: "Oui, absolument. Ils remplacent les mots de passe vulnérables par des jetons cryptographiques à usage unique valides pendant 15 minutes. C'est la solution idéale pour assurer une gestion simplifiée pour syndicat de copropriété en garantissant la confidentialité des données.",
+    q3: "Mes copropriétaires ou clients propriétaires peuvent-ils voir les données des autres ?",
+    a3: "Non, jamais. Chaque copropriétaire invité n'a accès qu'à sa propre unité et, en lecture seule, aux informations globales du syndicat (transparence financière, communications). Chaque client propriétaire d'un gestionnaire ne voit que ses propres relevés scellés, jamais les données des autres clients ni celles de gestion interne.",
     q4: "Comment AutoCompt m'aide-t-il avec le Fonds de prévoyance ?",
     a4: "AutoCompt intègre un module de planification financière conforme aux exigences québécoises (Loi 16). Notre solution immobilière provinciale vous aide à planifier les cotisations du fonds de prévoyance en fonction de l'évaluation physique de votre immeuble.",
   },
@@ -242,7 +270,35 @@ const EN = {
     subtitle: "Automated bookkeeping: Save up to 80% on your accounting fees and free up dozens of hours per month. AutoCompt is the leading real estate solution in Quebec, designed for self-employed workers, plex owners (personally or corporately), and co-ownership syndicates of all sizes.",
     ctaPrimary: "Optimize my accounting for free",
     ctaSecondary: "Test live simulator",
-    info: "No credit card required. Start your 14-day free trial.",
+    info: "No credit card required. Start your 30-day free trial.",
+  },
+  profiles: {
+    title: "A profile for every real estate reality in Quebec",
+    subtitle: "AutoCompt isn't a generic tool — it's six distinct experiences, each designed for a specific profession.",
+    prospecteur: {
+      title: "Real Estate Prospector",
+      desc: "Analyzing properties before investing? Track your deductible mileage and classify your prospecting expenses before your very first purchase.",
+    },
+    investisseur: {
+      title: "Real Estate Investor",
+      desc: "Manage your rental properties, your tax reports (T776, TP-128, CCA depreciation) and prepare your Relevé 31. Short-term rentals? The Furnished / Airbnb module automatically calculates the lodging tax and tracks your CITQ registration.",
+    },
+    flippeur: {
+      title: "House Flipper",
+      desc: "Calculate your after-repair value (ARV), your detailed renovation budget, and the split between partners — before making an offer.",
+    },
+    gestionnaire: {
+      title: "Property Manager",
+      desc: "A real trust account compliant with Quebec's Real Estate Brokerage Act. Track your property-owner clients, generate their Management Mandate, and let them consult their statements from their own secure AutoCompt account.",
+    },
+    syndicat: {
+      title: "Condo Syndicate",
+      desc: "Manage each unit's fees, generate AI-assisted reports and meeting notices, and keep your maintenance logbook compliant with Bill 16. Each co-owner can have their own read-only access.",
+    },
+    comptable: {
+      title: "Accountant",
+      desc: "A complete multi-client portfolio: General Journal, General Ledger, Trial Balance, GST/QST report, GIFI, and direct export to Sage 50, for each of your real estate clients.",
+    },
   },
   features: {
     title: "Real Estate Bookkeeping for all of Quebec",
@@ -344,7 +400,7 @@ const EN = {
         features: [
           "Automated bookkeeping: Rigorous tracking of the syndicate's expenses and income.",
           "Tracking of Mandatory Funds: Clear and separate visualization of the Contingency Fund and Self-Insurance Fund on the Dashboard.",
-          "Legal Register (DocuLegal): Automated archiving of minutes, bylaws, and financial statements in smart folders by year, accessible via Magic Links.",
+          "Legal Register (DocuLegal): Automated archiving of minutes, bylaws, and financial statements in smart folders by year, accessible anytime from your secure space.",
           "Board Governance & Tracking: Collaborative tools for the Board of Directors (1 full administrator, limited co-owner access)."
         ]
       },
@@ -370,8 +426,8 @@ const EN = {
     title: "A next-generation provincial real estate solution",
     subtitle: "Discover how our technology optimizes bookkeeping for investors, self-employed workers, and syndicates in Quebec.",
     magic: {
-      title: "Tax simplification: Relevé 31 Management",
-      desc: "Relevé 31 Management: Receive alerts for your deadlines and facilitate document distribution to your tenants. (The official document must be produced directly on the Revenu Québec website).",
+      title: "Secure account-based access for your property-owner clients",
+      desc: "Invite a property-owner client by email: they log in with their own address and get permanent access, from their own AutoCompt account, to their sealed statements — never a temporary link, real access they control, without ever seeing your internal management data.",
     },
     drive: {
       title: "Flexible Cloud Integration",
@@ -428,8 +484,8 @@ const EN = {
     a1: "Our OCR AI is configured specifically for the Quebec market. It automatically detects GST and QST registration numbers, calculates the exact sales taxes, and logs your receipts without any manual data entry.",
     q2: "Can I use AutoCompt if I already work with an accountant?",
     a2: "Absolutely. AutoCompt acts as a collection app for self-employed workers and managers to simplify data gathering. You can export reports in Excel/CSV formats or give direct access to your accountant to facilitate tax filing.",
-    q3: "Are Magic Links secure?",
-    a3: "Yes, absolutely. They replace vulnerable passwords with secure, single-use cryptographic tokens valid for 15 minutes. It is the ideal solution to ensure simplified management for co-ownership syndicates while guaranteeing data confidentiality.",
+    q3: "Can my co-owners or property-owner clients see each other's data?",
+    a3: "No, never. Each invited co-owner only has access to their own unit and, read-only, to the syndicate's overall information (financial transparency, communications). Each of a manager's property-owner clients only sees their own sealed statements, never other clients' data or internal management data.",
     q4: "How does AutoCompt help me with the contingency fund?",
     a4: "AutoCompt integrates a financial planning module compliant with Quebec requirements (Bill 16). Our provincial real estate solution helps you plan contingency fund contributions based on the physical evaluation of your building.",
   },
@@ -470,7 +526,35 @@ const ES = {
     subtitle: "Contabilidad automatizada: Ahorre hasta un 80% en sus gastos contables y libere decenas de horas al mes. AutoCompt es la solución inmobiliaria de referencia en Quebec, diseñada para trabajadores autónomos, propietarios de plex (a título personal o por empresa) y sindicatos de copropiedad de todos los tamaños.",
     ctaPrimary: "Optimizar mi contabilidad gratis",
     ctaSecondary: "Probar el simulador en vivo",
-    info: "No se requiere tarjeta de crédito. Comience su prueba gratuita de 14 días.",
+    info: "No se requiere tarjeta de crédito. Comience su prueba gratuita de 30 días.",
+  },
+  profiles: {
+    title: "Un perfil para cada realidad inmobiliaria en Quebec",
+    subtitle: "AutoCompt no es una herramienta genérica — son seis experiencias distintas, cada una diseñada para un oficio específico.",
+    prospecteur: {
+      title: "Prospector inmobiliario",
+      desc: "¿Analiza propiedades antes de invertir? Registre su kilometraje deducible y clasifique sus gastos de prospección antes incluso de su primera compra.",
+    },
+    investisseur: {
+      title: "Inversionista inmobiliario",
+      desc: "Gestione sus inmuebles de alquiler, sus informes fiscales (T776, TP-128, amortización DPA) y prepare su Relevé 31. ¿Alquiler de corta duración? El módulo Amueblado / Airbnb calcula automáticamente el impuesto de estadía y da seguimiento a su inscripción CITQ.",
+    },
+    flippeur: {
+      title: "Flippeur inmobiliario",
+      desc: "Calcule su valor después de reformas (ARV), su presupuesto de renovación detallado y el reparto entre socios — antes de hacer una oferta.",
+    },
+    gestionnaire: {
+      title: "Gestor inmobiliario",
+      desc: "Una cuenta en fideicomiso real, conforme a la Ley de corretaje inmobiliario de Quebec. Dé seguimiento a sus clientes propietarios, genere su Mandato de Gestión, y déjelos consultar sus estados de cuenta desde su propia cuenta segura de AutoCompt.",
+    },
+    syndicat: {
+      title: "Sindicato de copropiedad",
+      desc: "Gestione las cuotas de cada unidad, genere sus informes y convocatorias asistidos por IA, y mantenga su bitácora de mantenimiento conforme a la Ley 16. Cada copropietario puede tener su propio acceso de solo lectura.",
+    },
+    comptable: {
+      title: "Contador",
+      desc: "Un portafolio multi-cliente completo: Diario General, Libro Mayor, Balance, informe de TPS/TVQ, GIFI y exportación directa a Sage 50, para cada uno de sus clientes inmobiliarios.",
+    },
   },
   features: {
     title: "Contabilidad inmobiliaria para todo Quebec",
@@ -572,7 +656,7 @@ const ES = {
         features: [
           "Contabilidad automatizada: Seguimiento riguroso de los gastos e ingresos del sindicato.",
           "Seguimiento de Fondos Obligatorios: Visualización clara y separada del Fondo de previsión y Fondo de autoseguro en el Dashboard.",
-          "Registro legal (DocuLegal): Archivo automatizado de actas, reglamentos y estados financieros en carpetas inteligentes por año, accesible mediante Enlaces Mágicos.",
+          "Registro legal (DocuLegal): Archivo automatizado de actas, reglamentos y estados financieros en carpetas inteligentes por año, accesible en todo momento desde su espacio seguro.",
           "Gobernanza y seguimiento de la junta: Herramientas colaborativas de gestión para el consejo de administración (1 administrador completo, acceso limitado para copropietarios)."
         ]
       },
@@ -598,8 +682,8 @@ const ES = {
     title: "Una solución inmobiliaria provincial de nueva generación",
     subtitle: "Descubra cómo nuestra tecnología optimiza la contabilidad de inversores, trabajadores autónomos y sindicatos en Quebec.",
     magic: {
-      title: "Simplificación fiscal: Gestión del Relevé 31",
-      desc: "Gestión del Relevé 31: Reciba alertas para sus fechas límite y facilite la distribución de documentos a sus inquilinos. (El documento oficial debe producirse directamente en el sitio web de Revenu Québec).",
+      title: "Acceso seguro por cuenta para sus clientes propietarios",
+      desc: "Invite a un cliente propietario por correo: se conecta con su propia dirección y accede de forma permanente, desde su propia cuenta de AutoCompt, a sus estados de cuenta sellados — nunca un enlace temporal, un acceso real que él controla, sin ver jamás sus datos internos de gestión.",
     },
     drive: {
       title: "Integración Cloud flexible",
@@ -656,8 +740,8 @@ const ES = {
     a1: "Nuestra IA de reconocimiento óptico (OCR) está configurada específicamente para el mercado de Quebec. Detecta automáticamente los números de registro de TPS y TVQ, calcula los impuestos de venta exactos y clasifica sus recibos sin ingreso manual.",
     q2: "¿Puedo usar AutoCompt si ya trabajo con un contador?",
     a2: "Absolutamente. AutoCompt funciona como una herramienta de recopilación para trabajadores autónomos y gestores que simplifica la recopilación de datos. Puede exportar informes en formatos Excel/CSV o dar acceso directo a su contador para facilitar la declaración de impuestos.",
-    q3: "¿Son seguros los Enlaces Mágicos?",
-    a3: "Sí, por supuesto. Reemplazan contraseñas vulnerables con tokens criptográficos de un solo uso válidos por 15 minutos. Es la solución ideal para asegurar una gestión simplificada de copropiedades garantizando la confidencialidad de los datos.",
+    q3: "¿Mis copropietarios o clientes propietarios pueden ver los datos de los demás?",
+    a3: "No, nunca. Cada copropietario invitado solo tiene acceso a su propia unidad y, en modo lectura, a la información global del sindicato (transparencia financiera, comunicaciones). Cada cliente propietario de un gestor solo ve sus propios estados de cuenta sellados, nunca los datos de otros clientes ni los de gestión interna.",
     q4: "¿Cómo me ayuda AutoCompt con el fondo de previsión?",
     a4: "AutoCompt integra un módulo de planificación financiera que cumple con las regulaciones de Quebec (Loi 16). Nuestra solución inmobiliaria provincial le ayuda a planificar las contribuciones al fondo de previsión en función de la evaluación física de su edificio.",
   },

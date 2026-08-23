@@ -937,7 +937,7 @@ const htmlTemplate = `<!DOCTYPE html>
     </section>
 
     <!-- AI SUPPORT SECTION -->
-    <section id="support" class="py-20 border-b border-slate-200 bg-slate-100/50 transition-colors duration-300 dark:bg-zinc-900/30 dark:border-zinc-900">
+    <section id="support" class="py-20 border-b border-slate-200 bg-slate-100/50 transition-colors duration-300 dark:bg-zinc-900/30 dark:border-zinc-900 overflow-hidden">
       <div class="max-w-7xl mx-auto px-6">
         <div class="text-center max-w-3xl mx-auto mb-16">
           <span class="text-[10px] uppercase font-black tracking-wider text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/40 px-3.5 py-1.5 rounded-full">
@@ -948,39 +948,58 @@ const htmlTemplate = `<!DOCTYPE html>
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
-          <!-- Benefit 1 -->
-          <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
-            <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
-              <i data-lucide="message-square" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="support.card1Title">${t.support.card1Title}</h3>
-            <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="support.card1Desc">
-              ${t.support.card1Desc}
-            </p>
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+
+          <!-- Sofi visual -->
+          <div class="lg:col-span-2 relative flex justify-center order-1 lg:order-2">
+            <div class="absolute inset-[-10%] rounded-full blur-[70px] opacity-40 bg-emerald-300/40 dark:bg-emerald-500/25 pointer-events-none"></div>
+            <img
+              src="/sofi-assistant.png"
+              alt="Sofi, l'assistante intelligente d'AutoCompt"
+              width="516"
+              height="550"
+              loading="lazy"
+              decoding="async"
+              class="relative z-10 w-full max-w-[260px] sm:max-w-[320px] lg:max-w-[400px] h-auto object-contain drop-shadow-2xl"
+            />
           </div>
 
-          <!-- Benefit 2 -->
-          <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
-            <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-6">
-              <i data-lucide="cpu" class="w-6 h-6"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="support.card2Title">${t.support.card2Title}</h3>
-            <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="support.card2Desc">
-              ${t.support.card2Desc}
-            </p>
-          </div>
+          <!-- Benefit cards -->
+          <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-6 order-2 lg:order-1">
 
-          <!-- Benefit 3 -->
-          <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
-            <div class="w-12 h-12 rounded-2xl bg-rose-100 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-6">
-              <i data-lucide="sparkles" class="w-6 h-6"></i>
+            <!-- Benefit 1 -->
+            <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-6">
+                <i data-lucide="message-square" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="support.card1Title">${t.support.card1Title}</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="support.card1Desc">
+                ${t.support.card1Desc}
+              </p>
             </div>
-            <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="support.card3Title">${t.support.card3Title}</h3>
-            <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="support.card3Desc">
-              ${t.support.card3Desc}
-            </p>
+
+            <!-- Benefit 2 -->
+            <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+              <div class="w-12 h-12 rounded-2xl bg-indigo-100 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center mb-6">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="support.card2Title">${t.support.card2Title}</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="support.card2Desc">
+                ${t.support.card2Desc}
+              </p>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="rounded-4xl p-8 border border-slate-200 bg-white hover:bg-slate-50 transition-all duration-300 hover:translate-y-[-4px] hover:shadow-xl dark:bg-zinc-900/40 dark:border-zinc-800 dark:hover:bg-zinc-900/80 dark:hover:border-zinc-700/80">
+              <div class="w-12 h-12 rounded-2xl bg-rose-100 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 flex items-center justify-center mb-6">
+                <i data-lucide="sparkles" class="w-6 h-6"></i>
+              </div>
+              <h3 class="text-xl font-bold mb-3 text-slate-900 dark:text-white" data-t="support.card3Title">${t.support.card3Title}</h3>
+              <p class="text-sm leading-relaxed text-slate-600 dark:text-zinc-400" data-t="support.card3Desc">
+                ${t.support.card3Desc}
+              </p>
+            </div>
+
           </div>
 
         </div>

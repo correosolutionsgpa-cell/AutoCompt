@@ -183,11 +183,19 @@
         </div>
 
         <!-- Mobile Menu Button -->
-        <div class="flex md:hidden items-center gap-3">
+        <div class="flex md:hidden items-center gap-2">
           <button onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-indigo-600 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-yellow-400">
             <i data-lucide="moon" id="mobile-theme-icon-moon" class="w-4 h-4"></i>
             <i data-lucide="sun" id="mobile-theme-icon-sun" class="w-4 h-4 hidden"></i>
           </button>
+
+          <!-- Visible directly on mobile, not just inside the hamburger
+               drawer — a returning user shouldn't have to open the menu
+               to find "Se connecter". Requested 2026-08-25 (Fabiola,
+               testing on her phone). -->
+          <a href="https://app.autocompt.ca/?login=1" class="w-9 h-9 flex items-center justify-center rounded-xl bg-amber-500 hover:bg-amber-600 text-white shadow-md shadow-amber-500/25" title="Se connecter à mon espace">
+            <i data-lucide="log-in" class="w-4 h-4"></i>
+          </a>
 
           <button onclick="toggleMobileMenu()" class="w-9 h-9 flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 dark:border-zinc-800 dark:bg-zinc-900/40 dark:text-zinc-300">
             <i data-lucide="menu" id="mobile-menu-hamburger" class="w-5 h-5"></i>
